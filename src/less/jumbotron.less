@@ -1,0 +1,84 @@
+//
+// jumbotron
+//
+
+.section-jumbotron {
+  background-color: @link-hover-color;
+  margin-top: -70px;
+  padding-top: 40px;
+
+  > .jumbotron {
+    margin-bottom: 0;
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: 30px;
+    }
+
+    background-position: center center;
+    background-size: cover;
+    -ms-behavior: url(/css/backgroundsize.min.htc);
+
+    > .container {
+      .jumbotron-height(568px, @jumbotron-padding);
+
+      @media (min-width: @screen-sm-min) {
+        .jumbotron-height(@screen-sm-min, @jumbotron-padding * 1.6);
+      }
+
+      @media (min-width: @screen-md-min) {
+        .jumbotron-height(@screen-md-min, @jumbotron-padding * 1.6);
+      }
+
+      @media (min-width: @screen-lg-min) {
+        .jumbotron-height(@screen-lg-min, @jumbotron-padding * 1.6);
+      }
+
+      position: relative;
+
+      > .jumbotron-inner {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        text-align: right;
+        color: @gray-lighter;
+        .text-shadow;
+
+        h1 {
+          font-size: @font-size-h3;
+          font-family: @font-family-serif;
+        }
+        p {
+          font-size: @font-size-base;
+          margin-bottom: 0;
+        }
+
+        @media (min-width: @screen-sm-min) {
+          h1 {
+            font-size: (@font-size-base * 4.5);
+          }
+          p {
+            font-size: @jumbotron-font-size;
+          }
+        }
+
+        a.btn {
+          @media (min-width: @screen-sm-min) {
+            .box-shadow;
+            text-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.jumbotron-outer {
+  text-align: center;
+  color: @gray-darker;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

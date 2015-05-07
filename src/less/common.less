@@ -1,0 +1,57 @@
+//
+// fonts
+//
+
+body {
+    font-family: @font-family-sans-serif;
+    color: @text-color;
+    background-color: @bg-color;
+}
+
+main {
+    font-size: @font-size-less-large;
+}
+
+a {
+    color: @link-color;
+
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+    }
+}
+
+a.img-link {
+    display: block;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+    font-weight: 700;
+}
+
+img,
+span {
+    &.img-tn,
+    &.img-xs,
+    &.img-sm,
+    &.img-md {
+        display: block;
+    }
+}
+
+//
+// button
+//
+
+.btn-aqua {
+    .button-variant(@bg-color; @link-color; darken(@link-color, 5%));
+}
+
+//
+// list
+//
+
+.badge {
+    background-color: @mustard;
+}

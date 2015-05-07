@@ -44,10 +44,12 @@
         display: block;
         }
 
+        .widget li, .BlogArchive #ArchiveList ul.flat li {
+        padding: 0;
+        }
         ]]></b:skin>
 
     <b:template-skin><![CDATA[
-
         .text-shadow
         {
         text-shadow: 0 0 2px #000, 0 0 5px #000;
@@ -198,13 +200,13 @@
         height: 60px;
         margin-top: -5px;
 
-        background-image: url('/images/s/symbol-mark.png');
+        background-image: url('http://www.darumaya-gofuku.jp/images/s/symbol-mark.png');
         }
-        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
         {
         .noren-top .logo > .symbol-mark
         {
-        background-image: url('/images/s/symbol-mark@2x.png');
+        background-image: url('http://www.darumaya-gofuku.jp/images/s/symbol-mark@2x.png');
         -webkit-background-size: 60px 60px;
         background-size: 60px 60px;
         }
@@ -214,13 +216,13 @@
         width: 188px;
         height: 18px;
 
-        background-image: url('/images/l/logo-type-xs.png');
+        background-image: url('http://www.darumaya-gofuku.jp/images/l/logo-type-xs.png');
         }
-        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
         {
         .noren-top .logo > .logo-type
         {
-        background-image: url('/images/l/logo-type-xs@2x.png');
+        background-image: url('http://www.darumaya-gofuku.jp/images/l/logo-type-xs@2x.png');
         -webkit-background-size: 188px 18px;
         background-size: 188px 18px;
         }
@@ -233,14 +235,14 @@
         height: 25px;
         margin-left: 75px;
 
-        background-image: url('/images/l/logo-type.png');
+        background-image: url('http://www.darumaya-gofuku.jp/images/l/logo-type.png');
         }
         }
-        @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx)
+        @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx)
         {
         .noren-top .logo > .logo-type
         {
-        background-image: url('/images/l/logo-type@2x.png');
+        background-image: url('http://www.darumaya-gofuku.jp/images/l/logo-type@2x.png');
         -webkit-background-size: 266px 25px;
         background-size: 266px 25px;
         }
@@ -287,20 +289,20 @@
         position: relative;
         }
         }
-        .noren-bottom > .container > .nav-noren-wrapper.navbar-collapse
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper.navbar-collapse
         {
         -webkit-box-shadow: inset 0 1px 0 #a35b75;
         box-shadow: inset 0 1px 0 #a35b75;
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper
         {
         margin-right: -15px;
         margin-left: -15px;
         }
-        .noren-bottom > .container > .nav-noren-wrapper:before,
-        .noren-bottom > .container > .nav-noren-wrapper:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:after
         {
         position: absolute;
         top: 0;
@@ -316,39 +318,39 @@
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
         box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
         }
-        .noren-bottom > .container > .nav-noren-wrapper:before
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:before
         {
         left: -10001px;
         }
-        .noren-bottom > .container > .nav-noren-wrapper:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:after
         {
         right: -10001px;
         }
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren
         {
         margin-bottom: 0;
         padding-left: 0;
 
         list-style: none;
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren:after
         {
         display: table;
 
         content: ' ';
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren:after
         {
         clear: both;
         }
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li
         {
         position: relative;
 
@@ -368,33 +370,33 @@
         }
         @media (min-width: 992px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li
         {
         width: 162px;
         }
         }
         @media (min-width: 992px) and (max-width: 1199px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li:nth-child(1),
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li:nth-child(2)
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li:nth-child(1),
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li:nth-child(2)
         {
         width: 161px;
         }
         }
         @media (min-width: 1200px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li
         {
         width: 195px;
         }
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a
         {
         color: #eee;
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a
         {
         line-height: 1.42857143;
 
@@ -406,7 +408,6 @@
         -o-transition:      -o-transform ease .5s;
         transition:         transform ease .5s;
         -webkit-transform: rotateX(0deg);
-        -o-transform: rotateX(0deg);
         transform: rotateX(0deg);
         -webkit-transform-origin: 50% 0;
         -ms-transform-origin: 50% 0;
@@ -418,8 +419,8 @@
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
         box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:after
         {
         position: absolute;
         top: 0;
@@ -443,7 +444,7 @@
 
         filter: alpha(opacity=0);
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:before
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:before
         {
         background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
         background-image:      -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
@@ -453,7 +454,7 @@
 
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#33ffffff', GradientType=0);
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:after
         {
         background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
         background-image:      -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
@@ -464,8 +465,8 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#33000000', GradientType=0);
         }
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:hover,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:focus
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:hover,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:focus
         {
         text-decoration: none;
 
@@ -474,17 +475,16 @@
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:hover,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:focus
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:hover,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:focus
         {
         -webkit-transform: rotateX(30deg);
-        -o-transform: rotateX(30deg);
         transform: rotateX(30deg);
 
         background-color: #640125;
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:hover:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li > a:focus:before
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:hover:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:focus:before
         {
         opacity: 1;
 
@@ -493,29 +493,29 @@
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li:hover
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li:hover
         {
         z-index: 100;
         }
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active
         {
         z-index: 50;
         }
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus
         {
         background-color: #a35b75;
         }
         @media (min-width: 768px)
         {
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus
         {
         cursor: default;
         -webkit-transition: none;
@@ -532,12 +532,12 @@
         color: #eee;
         background-color: #640125;
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:after,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:after,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
         {
         -webkit-transition: none;
         -o-transition: none;
@@ -547,17 +547,17 @@
 
         filter: alpha(opacity=0);
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:before
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:before
         {
         -webkit-animation: highlight ease-in-out 3s infinite alternate;
         -o-animation: highlight ease-in-out 3s infinite alternate;
         animation: highlight ease-in-out 3s infinite alternate;
         }
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:after,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
-        .noren-bottom > .container > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:after,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
+        .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
         {
         -webkit-animation: highlight ease-in-out 3s infinite alternate-reverse;
         -o-animation: highlight ease-in-out 3s infinite alternate-reverse;
@@ -581,12 +581,10 @@
         {
         0%
         {
-        -o-transform: rotateX(20deg);
         transform: rotateX(20deg);
         }
         100%
         {
-        -o-transform: rotateX(-20deg);
         transform: rotateX(-20deg);
         }
         }
@@ -595,13 +593,11 @@
         0%
         {
         -webkit-transform: rotateX(20deg);
-        -o-transform: rotateX(20deg);
         transform: rotateX(20deg);
         }
         100%
         {
         -webkit-transform: rotateX(-20deg);
-        -o-transform: rotateX(-20deg);
         transform: rotateX(-20deg);
         }
         }
@@ -697,7 +693,7 @@
         dispay: inline-block;
         }
         }
-        @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx)
+        @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx)
         {
         footer .map
         {
@@ -716,7 +712,7 @@
         background-image: url('http://maps.googleapis.com/maps/api/staticmap?visible=35.33159%2C139.348566%7C35.327912%2C139.350608&maptype=roadmap&markers=size%3Asmall%7Ccolor%3Ared%7C35.33159%2C139.348566&sensor=false&&size=293x220&scale=1');
         }
         }
-        @media only screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 992px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 992px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 992px) and (min-device-pixel-ratio: 2), only screen and (min-width: 992px) and (min-resolution: 192dpi), only screen and (min-width: 992px) and (min-resolution: 2dppx)
+        @media only screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 992px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 992px) and (min-device-pixel-ratio: 2), only screen and (min-width: 992px) and (min-resolution: 192dpi), only screen and (min-width: 992px) and (min-resolution: 2dppx)
         {
         footer .map
         {
@@ -735,7 +731,7 @@
         background-image: url('http://maps.googleapis.com/maps/api/staticmap?visible=35.33159%2C139.348566%7C35.327912%2C139.350608&maptype=roadmap&markers=size%3Asmall%7Ccolor%3Ared%7C35.33159%2C139.348566&sensor=false&&size=360x220&scale=1');
         }
         }
-        @media only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (min-resolution: 192dpi), only screen and (min-width: 1200px) and (min-resolution: 2dppx)
+        @media only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (min-resolution: 192dpi), only screen and (min-width: 1200px) and (min-resolution: 2dppx)
         {
         footer .map
         {
@@ -946,7 +942,7 @@
         margin-bottom: 0;
 
         background-position: center center;
-        -webkit-background-size: cover cover;
+        -webkit-background-size: cover;
         background-size: cover;
 
         -ms-behavior: url(/css/backgroundsize.min.htc);
@@ -1572,8 +1568,7 @@
         border: 0;
         }
         }
-
-        ]]></b:template-skin>
+    ]]></b:template-skin>
     <b:include data='blog' name='google-analytics'/>
     <link href='//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet'/>
 </head>
@@ -1591,31 +1586,26 @@
 
 <nav class="navbar navbar-static-top" role="navigation">
     <div class="noren-top">
-        <div class='container'>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <b:section id='header' preferred='yes' showaddelement='yes'>
-                    <b:widget id='Header1' locked='true' title='だるまや京染本店dev (Header)' type='Header'>
-                        <b:includable id='main'>
-                            <a class="navbar-brand" href="/">
-                                <h1 class="logo">
-                                    <div class="symbol-mark hidden-xs"></div>
-                                    <div class="logo-type text-hide"><data:description/></div>
-                                </h1>
-                                <p class="tag-line hidden-xs"><data:description/></p>
-                            </a>
-
-                            <b:include name='title'/>
-                            <b:include name='description'/>
-                        </b:includable>
-                    </b:widget>
-                </b:section>
-            </div>
+        <div class="container">
+            <b:section class="navbar-header" id='header' preferred='yes' showaddelement='yes'>
+                <b:widget id='Header1' locked='true' title='だるまや京染本店dev (Header)' type='Header'>
+                    <b:includable id='main'>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">
+                            <h1 class="logo">
+                                <div class="symbol-mark hidden-xs"></div>
+                                <div class="logo-type text-hide"><data:description/></div>
+                            </h1>
+                            <p class="tag-line hidden-xs"><data:description/></p>
+                        </a>
+                    </b:includable>
+                </b:widget>
+            </b:section>
         </div>
     </div>
     <div class="noren-bottom">
@@ -1623,7 +1613,6 @@
             <b:section id='crosscol-overflow' preferred='yes' showaddelement='yes'>
                 <b:widget id='PageList1' locked='false' title='ページ' type='PageList'>
                     <b:includable id='main'>
-
                         <div class="collapse navbar-collapse nav-noren-wrapper" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav nav-noren">
                                 <b:loop values='data:links' var='link'>
@@ -1642,6 +1631,7 @@
             </b:section>
         </div>
     </div>
+
 </nav>
 
 <data:blog.google-analytics/>
