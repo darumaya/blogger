@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 
         // Task configuration.
         less: {
-            'darumaya': {
+            'blog': {
                 options: {
                     strictMath: true,
                     sourceMap: false
@@ -85,10 +85,6 @@ module.exports = function (grunt) {
             'dist-css': {
                 files: 'src/less/*.less',
                 tasks: 'dist-css'
-            },
-            'dist-images': {
-                files: ['src/images/**/*.{jpg,JPG}'],
-                tasks: 'dist-images'
             }
         }
     });
