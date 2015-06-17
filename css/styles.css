@@ -198,8 +198,8 @@ fieldset[disabled] .btn-aqua.active
     .noren-top .logo > .logo-type
     {
         background-image: url('/images/l/logo-type-xs@2x.png');
-        -webkit-background-size: 188px 18px;
-                background-size: 188px 18px;
+        -webkit-background-size: 198px 18px;
+                background-size: 198px 18px;
     }
 }
 @media (min-width: 768px)
@@ -218,8 +218,8 @@ fieldset[disabled] .btn-aqua.active
     .noren-top .logo > .logo-type
     {
         background-image: url('/images/l/logo-type@2x.png');
-        -webkit-background-size: 266px 25px;
-                background-size: 266px 25px;
+        -webkit-background-size: 335px 25px;
+                background-size: 335px 25px;
     }
 }
 .noren-top .tag-line
