@@ -1,0 +1,11 @@
+#layout header:after,
+#layout aside:after,
+#layout footer:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#layout .navbar {
+    height: auto;
+}

@@ -20,15 +20,6 @@ body .navbar
 {
     line-height: inherit;
 }
-#layout header:after,
-#layout aside:after,
-#layout footer:after
-{
-    display: block;
-    clear: both;
-
-    content: '';
-}
 .widget li,
 .BlogArchive #ArchiveList ul.flat li
 {
