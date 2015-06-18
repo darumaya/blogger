@@ -1,4 +1,51 @@
 <footer>
+    <div class="footer container">
+
+    </div>
+    <b:section class='row' id='footer' preferred='yes' showaddelement='yes'>
+        <b:widget id='HTML1' locked='false' title='' type='HTML' class='col-sm-4'>
+            <b:includable id='main'>
+                <!-- only display title if it's non-empty -->
+                <b:if cond='data:title != &quot;&quot;'>
+                    <h2 class='title'><data:title/></h2>
+                </b:if>
+                <div class='widget-content'>
+                    <data:content/>
+                </div>
+
+                <b:include name='quickedit'/>
+            </b:includable>
+        </b:widget>
+        <b:widget id='HTML2' locked='false' title='' type='HTML' class='col-sm-4'>
+            <b:includable id='main'>
+                <!-- only display title if it's non-empty -->
+                <b:if cond='data:title != &quot;&quot;'>
+                    <h2 class='title'><data:title/></h2>
+                </b:if>
+                <div class='widget-content'>
+                    <data:content/>
+                </div>
+
+                <b:include name='quickedit'/>
+            </b:includable>
+        </b:widget>
+        <b:widget id='HTML3' locked='false' title='' type='HTML' class='col-sm-4'>
+            <b:includable id='main'>
+                <!-- only display title if it's non-empty -->
+                <b:if cond='data:title != &quot;&quot;'>
+                    <h2 class='title'><data:title/></h2>
+                </b:if>
+                <div class='widget-content'>
+                    <data:content/>
+                </div>
+
+                <b:include name='quickedit'/>
+            </b:includable>
+        </b:widget>
+    </b:section>
+</footer>
+
+<!--footer>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -90,4 +137,4 @@
         </div>
         <p class="copyright">Copyright &copy; 2014 Darumaya Kyozome Honten. All Rights Reserved.</p>
     </div>
-</footer>
+</footer-->

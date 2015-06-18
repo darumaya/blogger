@@ -1,65 +1,92 @@
-<nav class="navbar navbar-static-top" role="navigation">
-    <div class="noren-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">
-                    <h1 class="logo">
-                        <div class="symbol-mark hidden-xs"></div>
-                        <div class="logo-type text-hide">だるまや京染本店</div>
-                    </h1>
-                    <p class="tag-line hidden-xs">伝統技術によるきもののお手入れと着こなしのご提案</p>
-                </a>
-            </div>
-            {% comment %}
-            <form class="navbar-form navbar-right hidden-xs" role="search">
-                <div class="input-group search">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                    </span>
-                </div>
-            </form>
-            {% endcomment %}
+<nav class='navbar navbar-static-top' role='navigation'>
+    <div class='noren-top'>
+        <div class='container'>
+            <b:section class='navbar-header' id='header' preferred='yes' showaddelement='yes'>
+                <b:widget id='Header1' locked='true' title='だるまや6代目奮闘記dev (Header)' type='Header'>
+                    <b:includable id='main'>
+                        <button class='navbar-toggle collapsed' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
+                            <span class='sr-only'>Toggle navigation</span>
+                            <span class='icon-bar'/>
+                            <span class='icon-bar'/>
+                            <span class='icon-bar'/>
+                        </button>
+                        <a class='navbar-brand' href='/'>
+                            <h1 class='logo'>
+                                <div class='symbol-mark hidden-xs'/>
+                                <div class='logo-type text-hide'><data:description/></div>
+                            </h1>
+                            <p class='tag-line hidden-xs'><data:description/></p>
+                        </a>
+                    </b:includable>
+                    <b:includable id='description'>
+                        <div class='descriptionwrapper'>
+                            <p class='description'><span><data:description/></span></p>
+                        </div>
+                    </b:includable>
+                    <b:includable id='title'>
+                        <b:if cond='data:blog.url == data:blog.homepageUrl'>
+                            <data:title/>
+                            <b:else/>
+                            <a expr:href='data:blog.homepageUrl'><data:title/></a>
+                        </b:if>
+                    </b:includable>
+                </b:widget>
+                <b:widget id='PageList2' locked='false' title='ページ' type='PageList'>
+                    <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+                        <div class='widget-content'>
+                            <b:if cond='data:mobile'>
+                                <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
+                                    <b:loop values='data:links' var='link'>
+                                        <b:if cond='data:link.isCurrentPage'>
+                                            <option expr:value='data:link.href' selected='selected'><data:link.title/></option>
+                                            <b:else/>
+                                            <option expr:value='data:link.href'><data:link.title/></option>
+                                        </b:if>
+                                    </b:loop>
+                                </select>
+                                <span class='pagelist-arrow'>&amp;#9660;</span>
+
+                                <b:else/>
+                                <ul>
+                                    <b:loop values='data:links' var='link'>
+                                        <b:if cond='data:link.isCurrentPage'>
+                                            <li class='selected'><a expr:href='data:link.href'><data:link.title/></a></li>
+                                            <b:else/>
+                                            <li><a expr:href='data:link.href'><data:link.title/></a></li>
+                                        </b:if>
+                                    </b:loop>
+                                </ul>
+                            </b:if>
+                            <b:include name='quickedit'/>
+                        </div>
+                    </b:includable>
+                </b:widget>
+            </b:section>
         </div>
     </div>
-    <div class="noren-bottom">
-        <div class="container">
-            <div class="collapse navbar-collapse nav-noren-wrapper" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav nav-noren">
-                    {% if page.category == 'だるまやのご紹介' %}
-                    <li class="active"><a href="/information/">だるまやのご紹介</a></li>
-                    {% else %}
-                    <li><a href="/information/">だるまやのご紹介</a></li>
-                    {% endif %}
-                    {% if page.category == 'きもののお手入れ' %}
-                    <li class="active"><a href="/maintenance/">きもののお手入れ</a></li>
-                    {% else %}
-                    <li><a href="/maintenance/">きもののお手入れ</a></li>
-                    {% endif %}
-                    {% if page.category == 'きものの再生事例' %}
-                    <li class="active"><a href="/revival/">きものの再生事例</a></li>
-                    {% else %}
-                    <li><a href="/revival/">きものの再生事例</a></li>
-                    {% endif %}
-                    {% if page.category == '着こなしのご提案' %}
-                    <li class="active"><a href="/coordinate/">着こなしのご提案</a></li>
-                    {% else %}
-                    <li><a href="/coordinate/">着こなしのご提案</a></li>
-                    {% endif %}
-                    {% if page.category == '催事のご案内' %}
-                    <li class="active"><a href="/event/">催事のご案内</a></li>
-                    {% else %}
-                    <li><a href="/event/">催事のご案内</a></li>
-                    {% endif %}
-                    <li><a href="http://blog.darumaya-gofuku.jp/">ブログ</a></li>
-                </ul>
-            </div>
+    <div class='noren-bottom'>
+        <div class='container'>
+            <b:section id='crosscol-overflow' preferred='yes' showaddelement='yes'>
+                <b:widget id='PageList1' locked='false' title='ページ' type='PageList'>
+                    <b:includable id='main'>
+                        <div class='collapse navbar-collapse nav-noren-wrapper' id='bs-example-navbar-collapse-1'>
+                            <ul class='nav navbar-nav nav-noren'>
+                                <b:loop values='data:links' var='link'>
+                                    <b:if cond='data:link.isCurrentPage'>
+                                        <li class='active'><a expr:href='data:link.href'><data:link.title/></a></li>
+                                        <b:else/>
+                                        <li><a expr:href='data:link.href'><data:link.title/></a></li>
+                                        <b:else/>
+                                    </b:if>
+                                </b:loop>
+                            </ul>
+                        </div>
+                        <b:include name='quickedit'/>
+                    </b:includable>
+                </b:widget>
+            </b:section>
         </div>
     </div>
+
 </nav>
