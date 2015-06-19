@@ -1,8 +1,8 @@
 <nav class='navbar navbar-static-top' role='navigation'>
     <div class='noren-top'>
         <div class='container'>
-            <b:section class='navbar-header' id='header' preferred='yes' showaddelement='yes'>
-                <b:widget id='Header1' locked='true' title='だるまや6代目奮闘記dev (Header)' type='Header'>
+            <b:section class='navbar-header' id='header1' preferred='yes' showaddelement='yes'>
+                <b:widget id='Header1' locked='true' title='だるまや六代目奮闘記dev (Header)' type='Header'>
                     <b:includable id='main'>
                         <button class='navbar-toggle collapsed' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
                             <span class='sr-only'>Toggle navigation</span>
@@ -31,9 +31,8 @@
                         </b:if>
                     </b:includable>
                 </b:widget>
-                <b:widget id='PageList2' locked='false' title='ページ' type='PageList'>
+                <b:widget id='PageList2' locked='false' title='nav2' type='PageList'>
                     <b:includable id='main'>
-                        <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
                         <div class='widget-content'>
                             <b:if cond='data:mobile'>
                                 <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
@@ -67,8 +66,8 @@
     </div>
     <div class='noren-bottom'>
         <div class='container'>
-            <b:section id='crosscol-overflow' preferred='yes' showaddelement='yes'>
-                <b:widget id='PageList1' locked='false' title='ページ' type='PageList'>
+            <b:section id='header2' preferred='yes' showaddelement='yes'>
+                <b:widget id='PageList1' locked='false' title='nav1' type='PageList'>
                     <b:includable id='main'>
                         <div class='collapse navbar-collapse nav-noren-wrapper' id='bs-example-navbar-collapse-1'>
                             <ul class='nav navbar-nav nav-noren'>
