@@ -88,13 +88,20 @@
     > li {
       > a {
         color: @gray-lighter;
-        padding-right: 0;
-        padding-left: 30px;
         &:hover,
         &:focus {
           color: @bg-color;
           background-color: inherit;
         }
+      }
+    }
+  }
+
+  .navbar-side.nav-right {
+    > li {
+      > a {
+        padding-right: 0;
+        padding-left: 30px;
       }
     }
   }

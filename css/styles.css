@@ -238,9 +238,6 @@ fieldset[disabled] .btn-aqua.active
 }
 .noren-top .nav-aside > li > a
 {
-    padding-right: 0;
-    padding-left: 30px;
-
     color: #eee;
 }
 .noren-top .nav-aside > li > a:hover,
@@ -248,6 +245,11 @@ fieldset[disabled] .btn-aqua.active
 {
     color: #fff;
     background-color: inherit;
+}
+.noren-top .navbar-side.nav-right > li > a
+{
+    padding-right: 0;
+    padding-left: 30px;
 }
 .noren-bottom
 {
