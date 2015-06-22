@@ -259,20 +259,20 @@ fieldset[disabled] .btn-aqua.active
         position: relative;
     }
 }
-.noren-bottom > .container > .section > .widget > .nav-noren-wrapper.navbar-collapse
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget.navbar-collapse
 {
     -webkit-box-shadow: inset 0 1px 0 #a35b75;
             box-shadow: inset 0 1px 0 #a35b75;
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget
     {
         margin-right: -15px;
         margin-left: -15px;
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:after
     {
         position: absolute;
         top: 0;
@@ -288,39 +288,39 @@ fieldset[disabled] .btn-aqua.active
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
                 box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:before
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:before
     {
         left: -10001px;
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:after
     {
         right: -10001px;
     }
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren
     {
         margin-bottom: 0;
         padding-left: 0;
 
         list-style: none;
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:after
     {
         display: table;
 
         content: ' ';
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:after
     {
         clear: both;
     }
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li
     {
         position: relative;
 
@@ -340,33 +340,33 @@ fieldset[disabled] .btn-aqua.active
 }
 @media (min-width: 992px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li
     {
         width: 162px;
     }
 }
 @media (min-width: 992px) and (max-width: 1199px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li:nth-child(1),
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li:nth-child(2)
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li:nth-child(1),
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li:nth-child(2)
     {
         width: 161px;
     }
 }
 @media (min-width: 1200px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li
     {
         width: 195px;
     }
 }
-.noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a
 {
     color: #eee;
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a
     {
         line-height: 1.42857143;
 
@@ -389,8 +389,8 @@ fieldset[disabled] .btn-aqua.active
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
                 box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:after
     {
         position: absolute;
         top: 0;
@@ -414,7 +414,7 @@ fieldset[disabled] .btn-aqua.active
 
         filter: alpha(opacity=0);
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:before
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:before
     {
         background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
         background-image:      -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 20%, rgba(255, 255, 255, .2));
@@ -424,7 +424,7 @@ fieldset[disabled] .btn-aqua.active
 
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#33ffffff', GradientType=0);
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:after
     {
         background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
         background-image:      -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2));
@@ -435,8 +435,8 @@ fieldset[disabled] .btn-aqua.active
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#33000000', GradientType=0);
     }
 }
-.noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:hover,
-.noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:focus
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:hover,
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:focus
 {
     text-decoration: none;
 
@@ -445,16 +445,16 @@ fieldset[disabled] .btn-aqua.active
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:hover,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:focus
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:hover,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:focus
     {
         -webkit-transform: rotateX(30deg);
                 transform: rotateX(30deg);
 
         background-color: #640125;
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:hover:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li > a:focus:before
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:hover:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li > a:focus:before
     {
         opacity: 1;
 
@@ -463,29 +463,29 @@ fieldset[disabled] .btn-aqua.active
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li:hover
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li:hover
     {
         z-index: 100;
     }
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active
     {
         z-index: 50;
     }
 }
-.noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a,
-.noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover,
-.noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a,
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:hover,
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:focus
 {
     background-color: #a35b75;
 }
 @media (min-width: 768px)
 {
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:hover,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:focus
     {
         cursor: default;
         -webkit-transition: none;
@@ -502,12 +502,12 @@ fieldset[disabled] .btn-aqua.active
         color: #eee;
         background-color: #640125;
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:after,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:hover:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:focus:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:after,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:hover:after,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:focus:after
     {
         -webkit-transition: none;
              -o-transition: none;
@@ -517,17 +517,17 @@ fieldset[disabled] .btn-aqua.active
 
         filter: alpha(opacity=0);
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:before,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:before
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:hover:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:focus:before
     {
         -webkit-animation: highlight ease-in-out 3s infinite alternate;
              -o-animation: highlight ease-in-out 3s infinite alternate;
                 animation: highlight ease-in-out 3s infinite alternate;
     }
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:after,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:hover:after,
-    .noren-bottom > .container > .section > .widget > .nav-noren-wrapper .nav-noren > li.active > a:focus:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:after,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:hover:after,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren > li.active > a:focus:after
     {
         -webkit-animation: highlight ease-in-out 3s infinite alternate-reverse;
              -o-animation: highlight ease-in-out 3s infinite alternate-reverse;

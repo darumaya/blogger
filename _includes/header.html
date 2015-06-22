@@ -31,45 +31,15 @@
                         </b:if>
                     </b:includable>
                 </b:widget>
-                <b:widget id='PageList2' locked='false' title='nav2' type='PageList'>
-                    <b:includable id='main'>
-                        <div class='widget-content'>
-                            <b:if cond='data:mobile'>
-                                <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
-                                    <b:loop values='data:links' var='link'>
-                                        <b:if cond='data:link.isCurrentPage'>
-                                            <option expr:value='data:link.href' selected='selected'><data:link.title/></option>
-                                            <b:else/>
-                                            <option expr:value='data:link.href'><data:link.title/></option>
-                                        </b:if>
-                                    </b:loop>
-                                </select>
-                                <span class='pagelist-arrow'>&amp;#9660;</span>
-
-                                <b:else/>
-                                <ul>
-                                    <b:loop values='data:links' var='link'>
-                                        <b:if cond='data:link.isCurrentPage'>
-                                            <li class='selected'><a expr:href='data:link.href'><data:link.title/></a></li>
-                                            <b:else/>
-                                            <li><a expr:href='data:link.href'><data:link.title/></a></li>
-                                        </b:if>
-                                    </b:loop>
-                                </ul>
-                            </b:if>
-                            <b:include name='quickedit'/>
-                        </div>
-                    </b:includable>
-                </b:widget>
             </b:section>
         </div>
     </div>
     <div class='noren-bottom'>
         <div class='container'>
-            <b:section id='header2' preferred='yes' showaddelement='yes'>
-                <b:widget id='PageList1' locked='false' title='nav1' type='PageList'>
-                    <b:includable id='main'>
-                        <div class='collapse navbar-collapse nav-noren-wrapper' id='bs-example-navbar-collapse-1'>
+            <div class='collapse navbar-collapse nav-noren-wrapper' id='bs-example-navbar-collapse-1'>
+                <b:section id='header2' preferred='yes' showaddelement='yes'>
+                    <b:widget id='PageList1' locked='false' title='nav1' type='PageList'>
+                        <b:includable id='main'>
                             <ul class='nav navbar-nav nav-noren'>
                                 <b:loop values='data:links' var='link'>
                                     <b:if cond='data:link.isCurrentPage'>
@@ -80,11 +50,22 @@
                                     </b:if>
                                 </b:loop>
                             </ul>
-                        </div>
-                        <b:include name='quickedit'/>
-                    </b:includable>
-                </b:widget>
-            </b:section>
+                            <b:include name='quickedit'/>
+                        </b:includable>
+                    </b:widget>
+
+                    <b:widget id='PageList2' locked='false' title='nav2' type='PageList'>
+                        <b:includable id='main'>
+                            <ul class="nav navbar-nav navbar-right">
+                                <b:loop values='data:links' var='link'>
+                                    <li><a expr:href='data:link.href'><data:link.title/></a></li>
+                                </b:loop>
+                            </ul>
+                            <b:include name='quickedit'/>
+                        </b:includable>
+                    </b:widget>
+                </b:section>
+            </div>
         </div>
     </div>
 
