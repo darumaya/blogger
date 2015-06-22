@@ -538,6 +538,24 @@ fieldset[disabled] .btn-aqua.active
 {
     display: block;
 }
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden > li > a
+{
+    color: #eee;
+}
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden > li > a:hover,
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden > li > a:focus
+{
+    text-decoration: none;
+
+    color: #fff;
+    background-color: #a35b75;
+}
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden > li.active > a,
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden > li.active > a:hover,
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden > li.active > a:focus
+{
+    background-color: #a35b75;
+}
 @media (min-width: 768px)
 {
     .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden

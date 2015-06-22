@@ -261,6 +261,28 @@
 
           .nav-hidden {
             display: block;
+
+            >li {
+              > a {
+                color: @gray-lighter;
+
+                &:hover,
+                &:focus {
+                  background-color: @ebiiro-light;
+                  text-decoration: none;
+                  color: @bg-color;
+                }
+              }
+
+              &.active {
+                > a,
+                > a:hover,
+                > a:focus {
+                  background-color: @ebiiro-light;
+                }
+              }
+            }
+
             @media (min-width: @screen-sm-min) {
               display: none;
             }
