@@ -534,6 +534,17 @@ fieldset[disabled] .btn-aqua.active
                 animation: highlight ease-in-out 3s infinite alternate-reverse;
     }
 }
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden
+{
+    display: none;
+}
+@media (min-width: 768px)
+{
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden
+    {
+        display: block;
+    }
+}
 @-webkit-keyframes swing
 {
     0%
