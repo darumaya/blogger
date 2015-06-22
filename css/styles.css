@@ -236,6 +236,16 @@ fieldset[disabled] .btn-aqua.active
 {
     margin: 10px -15px 0 0;
 }
+.noren-top .nav-aside > li > a
+{
+    color: #eee;
+}
+.noren-top .nav-aside > li > a:hover,
+.noren-top .nav-aside > li > a:focus
+{
+    color: #fff;
+    background-color: inherit;
+}
 .noren-bottom
 {
     background-color: #640125;
@@ -562,16 +572,6 @@ fieldset[disabled] .btn-aqua.active
     {
         display: none;
     }
-}
-.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-aside > li > a
-{
-    color: #eee;
-}
-.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-aside > li > a:hover,
-.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-aside > li > a:focus
-{
-    color: #fff;
-    background-color: inherit;
 }
 @-webkit-keyframes swing
 {

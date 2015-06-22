@@ -83,6 +83,19 @@
   .search {
     margin: 10px (-@grid-gutter-width / 2) 0 0;
   }
+
+  .nav-aside {
+    > li {
+      > a {
+        color: @gray-lighter;
+        &:hover,
+        &:focus {
+          color: @bg-color;
+          background-color: inherit;
+        }
+      }
+    }
+  }
 }
 
 .noren-bottom {
@@ -286,19 +299,6 @@
 
             @media (min-width: @screen-sm-min) {
               display: none;
-            }
-          }
-
-          .nav-aside {
-            > li {
-              > a {
-                color: @gray-lighter;
-                &:hover,
-                &:focus {
-                  color: @bg-color;
-                  background-color: inherit;
-                }
-              }
             }
           }
         }
