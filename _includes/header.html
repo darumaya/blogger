@@ -1,22 +1,24 @@
 <nav class='navbar navbar-static-top' role='navigation'>
     <div class='noren-top'>
         <div class='container'>
-            <b:section class='navbar-header' id='header1' preferred='yes' showaddelement='yes'>
+            <b:section id='header1' preferred='yes' showaddelement='yes'>
                 <b:widget id='Header1' locked='true' title='だるまや六代目奮闘記dev (Header)' type='Header'>
                     <b:includable id='main'>
-                        <button class='navbar-toggle collapsed' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
-                            <span class='sr-only'>Toggle navigation</span>
-                            <span class='icon-bar'/>
-                            <span class='icon-bar'/>
-                            <span class='icon-bar'/>
-                        </button>
-                        <a class='navbar-brand' href='/'>
-                            <h1 class='logo'>
-                                <div class='symbol-mark hidden-xs'/>
-                                <div class='logo-type text-hide'><data:description/></div>
-                            </h1>
-                            <p class='tag-line hidden-xs'><data:description/></p>
-                        </a>
+                        <div class='navbar-header'>
+                            <button class='navbar-toggle collapsed' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
+                                <span class='sr-only'>Toggle navigation</span>
+                                <span class='icon-bar'/>
+                                <span class='icon-bar'/>
+                                <span class='icon-bar'/>
+                            </button>
+                            <a class='navbar-brand' href='/'>
+                                <h1 class='logo'>
+                                    <div class='symbol-mark hidden-xs'/>
+                                    <div class='logo-type text-hide'><data:description/></div>
+                                </h1>
+                                <p class='tag-line hidden-xs'><data:description/></p>
+                            </a>
+                        </div>
                     </b:includable>
                     <b:includable id='description'>
                         <div class='descriptionwrapper'>
@@ -29,6 +31,16 @@
                             <b:else/>
                             <a expr:href='data:blog.homepageUrl'><data:title/></a>
                         </b:if>
+                    </b:includable>
+                </b:widget>
+                <b:widget id='PageList3' locked='false' title='nav2' type='PageList'>
+                    <b:includable id='main'>
+                        <ul class="nav navbar-nav navbar-right nav-aside">
+                            <b:loop values='data:links' var='link'>
+                                <li><a expr:href='data:link.href'><data:link.title/></a></li>
+                            </b:loop>
+                        </ul>
+                        <b:include name='quickedit'/>
                     </b:includable>
                 </b:widget>
             </b:section>
@@ -54,7 +66,7 @@
                         </b:includable>
                     </b:widget>
 
-                    <b:widget id='PageList2' locked='false' title='nav2' type='PageList'>
+                    <b:widget id='PageList2' locked='false' title='nav2-hidden' type='PageList'>
                         <b:includable id='main'>
                             <ul class="nav navbar-nav nav-hidden">
                                 <b:loop values='data:links' var='link'>

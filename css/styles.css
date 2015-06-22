@@ -563,6 +563,16 @@ fieldset[disabled] .btn-aqua.active
         display: none;
     }
 }
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-aside > li > a
+{
+    color: #eee;
+}
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-aside > li > a:hover,
+.noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-aside > li > a:focus
+{
+    color: #fff;
+    background-color: inherit;
+}
 @-webkit-keyframes swing
 {
     0%
