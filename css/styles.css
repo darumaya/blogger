@@ -271,8 +271,18 @@ fieldset[disabled] .btn-aqua.active
         margin-right: -15px;
         margin-left: -15px;
     }
-    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:before,
-    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:after
+}
+@media (min-width: 768px)
+{
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren
+    {
+        margin-bottom: 0;
+        padding-left: 0;
+
+        list-style: none;
+    }
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:before,
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:after
     {
         position: absolute;
         top: 0;
@@ -288,23 +298,13 @@ fieldset[disabled] .btn-aqua.active
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
                 box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
     }
-    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:before
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:before
     {
         left: -10001px;
     }
-    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget:after
+    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:after
     {
         right: -10001px;
-    }
-}
-@media (min-width: 768px)
-{
-    .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren
-    {
-        margin-bottom: 0;
-        padding-left: 0;
-
-        list-style: none;
     }
     .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:before,
     .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-noren:after
