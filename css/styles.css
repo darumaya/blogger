@@ -536,13 +536,13 @@ fieldset[disabled] .btn-aqua.active
 }
 .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden
 {
-    display: none;
+    display: block;
 }
 @media (min-width: 768px)
 {
     .noren-bottom > .container > .nav-noren-wrapper > .section > .widget .nav-hidden
     {
-        display: block;
+        display: none;
     }
 }
 @-webkit-keyframes swing
