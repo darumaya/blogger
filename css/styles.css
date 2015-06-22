@@ -238,13 +238,17 @@ fieldset[disabled] .btn-aqua.active
 }
 .noren-top .nav-aside > li > a
 {
-    color: #eee;
+    color: #777;
 }
 .noren-top .nav-aside > li > a:hover,
 .noren-top .nav-aside > li > a:focus
 {
     color: #fff;
     background-color: inherit;
+}
+.noren-top .navbar-side.nav-right
+{
+    margin-right: -15px;
 }
 .noren-top .navbar-side.nav-right > li > a
 {
