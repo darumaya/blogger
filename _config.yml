@@ -8,3 +8,6 @@ exclude:
   - 'Gruntfile.js'
   - 'package.json'
   - 'README.md'
+  - 'css'
+  - 'images'
+  - 'CNAME'
