@@ -2,75 +2,44 @@
     <b:section class='main' id='main' preferred='yes' showaddelement='yes'>
         <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
             <b:includable id='main' var='top'>
+                <div class="container">
 
-                <!-- posts -->
-                <div class='blog-posts hfeed'>
+                    <!-- posts -->
                     <b:include data='top' name='status-message'/>
 
                     <data:defaultAdStart/>
 
                     <b:loop values='data:posts' var='post'>
 
-                        <b:if cond='data:post.isDateStart'>
-                            <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
-                            </b:if>
-                        </b:if>
-                        <b:if cond='data:post.isDateStart'>
-                        </b:if>
-                        <b:if cond='data:post.dateHeader'>
-                            <div class='container'>
-                                <h2 class='date-header'><data:post.dateHeader/></h2>
-                            </div>
-                        </b:if>
-                        <b:if cond='data:post.isDateStart'>
-                        </b:if>
-                        <div class='post-outer'>
-                            <b:include data='post' name='post'/>
-                            <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-                                <b:include data='post' name='comment_picker'/>
-                            </b:if>
-                            <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                                <b:include data='post' name='comment_picker'/>
-                            </b:if>
-                        </div>
-                        <b:if cond='data:post.includeAd'>
-                            <b:if cond='data:post.isFirstPost'>
-                                <data:defaultAdEnd/>
-                                <b:else/>
-                                <data:adEnd/>
-                            </b:if>
-                            <div class='inline-ad'>
-                                <data:adCode/>
-                            </div>
-                            <data:adStart/>
-                        </b:if>
+                        <b:include data='post' name='post'/>
+
                     </b:loop>
 
                     <b:if cond='data:numPosts != 0'>
                     </b:if>
 
                     <data:adEnd/>
+
+                    <!-- navigation -->
+                    <b:include name='nextprev'/>
+
+                    <!-- feed links -->
+                    <b:include name='feedLinks'/>
+
+                    <b:if cond='data:top.showStars'>
+                        <script src='//www.google.com/jsapi' type='text/javascript'/>
+                        <script type='text/javascript'>
+                            google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
+                            function initialize() {
+                                google.annotations.setApplicationId(<data:top.blogspotReviews/>);
+                                google.annotations.createAll();
+                                google.annotations.fetch();
+                            }
+                            google.setOnLoadCallback(initialize);
+                        </script>
+                    </b:if>
+
                 </div>
-
-                <!-- navigation -->
-                <b:include name='nextprev'/>
-
-                <!-- feed links -->
-                <b:include name='feedLinks'/>
-
-                <b:if cond='data:top.showStars'>
-                    <script src='//www.google.com/jsapi' type='text/javascript'/>
-                    <script type='text/javascript'>
-                        google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
-                        function initialize() {
-                            google.annotations.setApplicationId(<data:top.blogspotReviews/>);
-                            google.annotations.createAll();
-                            google.annotations.fetch();
-                        }
-                        google.setOnLoadCallback(initialize);
-                    </script>
-                </b:if>
-
             </b:includable>
             <b:includable id='backlinkDeleteIcon' var='backlink'>
             <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
@@ -331,56 +300,74 @@
                 </div>
             </b:includable>
             <b:includable id='post' var='post'>
-                <div class='post hentry uncustomized-post-template container' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-                    <b:if cond='data:post.firstImageUrl'>
-                        <meta expr:content='data:post.firstImageUrl' itemprop='image_url'/>
-                    </b:if>
-                    <meta expr:content='data:blog.blogId' itemprop='blogId'/>
-                    <meta expr:content='data:post.id' itemprop='postId'/>
 
-                    <a expr:name='data:post.id'/>
-                    <b:if cond='data:post.title'>
-                        <h3 class='post-title entry-title' itemprop='name'>
-                            <b:if cond='data:post.link'>
-                                <a expr:href='data:post.link'><data:post.title/></a>
-                                <b:else/>
-                                <b:if cond='data:post.url'>
-                                    <b:if cond='data:blog.url != data:post.url'>
-                                        <a expr:href='data:post.url'><data:post.title/></a>
-                                        <b:else/>
-                                        <data:post.title/>
-                                    </b:if>
-                                    <b:else/>
-                                    <data:post.title/>
-                                </b:if>
+                <b:if cond='data:blog.pageType == &quot;item&quot;'>
+
+                    <b:if cond='data:post.isDateStart'>
+                        <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
+                        </b:if>
+                    </b:if>
+                    <b:if cond='data:post.isDateStart'>
+                    </b:if>
+                    <b:if cond='data:post.dateHeader'>
+                        <div class='container'>
+                            <h2 class='date-header'><data:post.dateHeader/></h2>
+                        </div>
+                    </b:if>
+                    <b:if cond='data:post.isDateStart'>
+                    </b:if>
+                    <div class='post-outer'>
+
+                        <div class='post hentry uncustomized-post-template container' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+                            <b:if cond='data:post.firstImageUrl'>
+                                <meta expr:content='data:post.firstImageUrl' itemprop='image_url'/>
                             </b:if>
-                        </h3>
-                    </b:if>
+                            <meta expr:content='data:blog.blogId' itemprop='blogId'/>
+                            <meta expr:content='data:post.id' itemprop='postId'/>
 
-                    <div class='post-header'>
-                        <div class='post-header-line-1'/>
-                    </div>
+                            <a expr:name='data:post.id'/>
+                            <b:if cond='data:post.title'>
+                                <h3 class='post-title entry-title' itemprop='name'>
+                                    <b:if cond='data:post.link'>
+                                        <a expr:href='data:post.link'><data:post.title/></a>
+                                        <b:else/>
+                                        <b:if cond='data:post.url'>
+                                            <b:if cond='data:blog.url != data:post.url'>
+                                                <a expr:href='data:post.url'><data:post.title/></a>
+                                                <b:else/>
+                                                <data:post.title/>
+                                            </b:if>
+                                            <b:else/>
+                                            <data:post.title/>
+                                        </b:if>
+                                    </b:if>
+                                </h3>
+                            </b:if>
 
-                    <b:if cond='data:blog.metaDescription == &quot;&quot;'>
-                        <!-- Then use the post body as the schema.org description,
-                            for good G+/FB snippeting. -->
-                        <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='description articleBody'>
-                            <data:post.body/>
-                        </div>
-                        <b:else/>
-                        <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
-                            <data:post.body/>
-                        </div>
-                    </b:if>
+                            <div class='post-header'>
+                                <div class='post-header-line-1'/>
+                            </div>
 
-                    <b:if cond='data:post.hasJumpLink'>
-                        <div class='jump-link'>
-                            <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
-                        </div>
-                    </b:if>
+                            <b:if cond='data:blog.metaDescription == &quot;&quot;'>
+                                <!-- Then use the post body as the schema.org description,
+                                    for good G+/FB snippeting. -->
+                                <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='description articleBody'>
+                                    <data:post.body/>
+                                </div>
+                                <b:else/>
+                                <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+                                    <data:post.body/>
+                                </div>
+                            </b:if>
 
-                    <div class='post-footer'>
-                        <div class='post-footer-line post-footer-line-1'>
+                            <b:if cond='data:post.hasJumpLink'>
+                                <div class='jump-link'>
+                                    <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+                                </div>
+                            </b:if>
+
+                            <div class='post-footer'>
+                                <div class='post-footer-line post-footer-line-1'>
                               <span class='post-author vcard'>
                                 <b:if cond='data:top.showAuthor'>
                                     <data:top.authorLabel/>
@@ -436,7 +423,7 @@
                                 </b:if>
                               </span>
 
-                            <!-- backlinks -->
+                                    <!-- backlinks -->
                                <span class='post-backlinks post-comment-link'>
                                  <b:if cond='data:blog.pageType != &quot;item&quot;'>
                                      <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
@@ -461,16 +448,16 @@
                                 <b:include data='post' name='postQuickEdit'/>
                               </span>
 
-                            <!-- share buttons -->
-                            <div class='post-share-buttons goog-inline-block'>
-                                <b:if cond='data:post.sharePostUrl'>
-                                    <b:include data='post' name='shareButtons'/>
-                                </b:if>
-                            </div>
+                                    <!-- share buttons -->
+                                    <div class='post-share-buttons goog-inline-block'>
+                                        <b:if cond='data:post.sharePostUrl'>
+                                            <b:include data='post' name='shareButtons'/>
+                                        </b:if>
+                                    </div>
 
-                        </div>
+                                </div>
 
-                        <div class='post-footer-line post-footer-line-2'>
+                                <div class='post-footer-line post-footer-line-2'>
                               <span class='post-labels'>
                                 <b:if cond='data:post.labels'>
                                     <data:postLabelsLabel/>
@@ -479,9 +466,9 @@
                                     </b:loop>
                                 </b:if>
                               </span>
-                        </div>
+                                </div>
 
-                        <div class='post-footer-line post-footer-line-3'>
+                                <div class='post-footer-line post-footer-line-3'>
                               <span class='post-location'>
                                 <b:if cond='data:top.showLocation'>
                                     <b:if cond='data:post.location'>
@@ -490,22 +477,85 @@
                                     </b:if>
                                 </b:if>
                               </span>
-                        </div>
-                        <b:if cond='data:post.authorAboutMe'>
-                            <div class='author-profile' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
-                                <b:if cond='data:post.authorPhoto.url'>
-                                    <img expr:src='data:post.authorPhoto.url' itemprop='image' width='50px'/>
-                                </b:if>
-                                <div>
-                                    <a class='g-profile' expr:href='data:post.authorProfileUrl' itemprop='url' rel='author' title='author profile'>
-                                        <span itemprop='name'><data:post.author/></span>
-                                    </a>
                                 </div>
-                                <span itemprop='description'><data:post.authorAboutMe/></span>
+                                <b:if cond='data:post.authorAboutMe'>
+                                    <div class='author-profile' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                                        <b:if cond='data:post.authorPhoto.url'>
+                                            <img expr:src='data:post.authorPhoto.url' itemprop='image' width='50px'/>
+                                        </b:if>
+                                        <div>
+                                            <a class='g-profile' expr:href='data:post.authorProfileUrl' itemprop='url' rel='author' title='author profile'>
+                                                <span itemprop='name'><data:post.author/></span>
+                                            </a>
+                                        </div>
+                                        <span itemprop='description'><data:post.authorAboutMe/></span>
+                                    </div>
+                                </b:if>
                             </div>
+                        </div>
+
+                        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                            <b:include data='post' name='comment_picker'/>
+                        </b:if>
+                        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                            <b:include data='post' name='comment_picker'/>
                         </b:if>
                     </div>
-                </div>
+                    <b:if cond='data:post.includeAd'>
+                        <b:if cond='data:post.isFirstPost'>
+                            <data:defaultAdEnd/>
+                            <b:else/>
+                            <data:adEnd/>
+                        </b:if>
+                        <div class='inline-ad'>
+                            <data:adCode/>
+                        </div>
+                        <data:adStart/>
+                    </b:if>
+
+                    <b:else/>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#">
+                                <b:if cond='data:post.thumbnailUrl'>
+                                    <script>
+                                        (function(src, alt) {
+                                            //<![CDATA[
+                                            var img = "<img src='{src}' alt='{alt}' class='media-object'/>";
+                                            src = src.replace('/s72-c/', '/s360-c/');
+                                            img = img.replace('{src}', src).replace('{alt}', alt);
+                                            document.write(img);
+                                            //]]>
+                                        })(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;);
+                                    </script>
+                                    <b:else/>
+                                </b:if>
+                            </a>
+                        </div>
+
+                        <div class="media-body">
+                            <b:if cond='data:post.dateHeader'>
+                                <h6 class='media-heading'><data:post.dateHeader/></h6>
+                                <b:else/>
+                            </b:if>
+
+                            <b:if cond='data:post.title'>
+                                <h4 class='media-heading' itemprop='name'>
+                                    <data:post.title/>
+                                </h4>
+                                <b:else/>
+                            </b:if>
+
+                            <b:if cond='data:post.snippet'>
+                                <p><data:post.snippet/></p>
+                                <b:else/>
+                            </b:if>
+                        </div>
+                    </div>
+
+                </b:if>
+
             </b:includable>
             <b:includable id='postQuickEdit' var='post'>
                 <b:if cond='data:post.editUrl'>
