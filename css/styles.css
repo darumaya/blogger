@@ -248,11 +248,11 @@ fieldset[disabled] .btn-aqua.active
 }
 .noren-top .nav-aside.navbar-right > li:first-child > a
 {
-    padding-right: 0;
+    padding-left: 0;
 }
 .noren-top .nav-aside.navbar-right > li:last-child > a
 {
-    padding-left: 0;
+    padding-right: 0;
 }
 .noren-bottom
 {
