@@ -7,6 +7,10 @@
 .noren-top {
   background-color: @ebiiro;
 
+  > .container {
+    position: relative;
+  }
+
   .navbar-brand {
     @media (min-width: @screen-sm-min) {
       padding: 0;
@@ -85,6 +89,10 @@
   }
 
   .nav-aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
     > li {
       > a {
         color: #ccc;

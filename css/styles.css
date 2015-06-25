@@ -127,6 +127,10 @@ fieldset[disabled] .btn-aqua.active
 {
     background-color: #640125;
 }
+.noren-top > .container
+{
+    position: relative;
+}
 @media (min-width: 768px)
 {
     .noren-top .navbar-brand
@@ -235,6 +239,12 @@ fieldset[disabled] .btn-aqua.active
 .noren-top .search
 {
     margin: 10px -15px 0 0;
+}
+.noren-top .nav-aside
+{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .noren-top .nav-aside > li > a
 {
