@@ -246,10 +246,13 @@ fieldset[disabled] .btn-aqua.active
     color: #fff;
     background-color: inherit;
 }
-.noren-top .nav-aside.navbar-right > li > a
+.noren-top .nav-aside.navbar-right > li:first-child > a
 {
     padding-right: 0;
-    padding-left: 30px;
+}
+.noren-top .nav-aside.navbar-right > li:last-child > a
+{
+    padding-left: 0;
 }
 .noren-bottom
 {

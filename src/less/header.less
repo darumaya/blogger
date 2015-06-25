@@ -98,10 +98,14 @@
   }
 
   .nav-aside.navbar-right {
-    > li {
+    > li:first-child {
       > a {
         padding-right: 0;
-        padding-left: 30px;
+      }
+    }
+    > li:last-child {
+      > a {
+        padding-left: 0;
       }
     }
   }
