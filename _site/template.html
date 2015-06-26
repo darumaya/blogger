@@ -674,19 +674,19 @@
 
                         <div class="media-body">
                             <b:if cond='data:post.dateHeader'>
-                                <h6 class='media-heading'><data:post.dateHeader/></h6>
+                                <h4 class='media-heading'><data:post.dateHeader/></h4>
                                 <b:else/>
                             </b:if>
 
                             <b:if cond='data:post.title'>
-                                <h4 class='media-heading' itemprop='name'>
+                                <h2 class='media-heading' itemprop='name'>
                                     <data:post.title/>
-                                </h4>
+                                </h2>
                                 <b:else/>
                             </b:if>
 
                             <b:if cond='data:post.snippet'>
-                                <p><data:post.snippet/></p>
+                                <p class="lead"><data:post.snippet/></p>
                                 <b:else/>
                             </b:if>
                         </div>
