@@ -1,4 +1,5 @@
-_site
+_site/css
+_site/images
 .saas-cache
 .DS_Store
 .idea
