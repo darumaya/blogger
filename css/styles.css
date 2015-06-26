@@ -260,10 +260,6 @@ fieldset[disabled] .btn-aqua.active
 {
     padding-left: 0;
 }
-.noren-top .nav-aside.navbar-right > li:last-child > a
-{
-    padding-right: 0;
-}
 .noren-bottom
 {
     background-color: #640125;
