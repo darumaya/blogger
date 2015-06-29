@@ -123,6 +123,14 @@ fieldset[disabled] .btn-aqua.active
 {
     background-color: #8c8541;
 }
+.thumbnail-3by2
+{
+    width: 360px;
+    height: 240px;
+
+    -webkit-background-size: contain;
+            background-size: contain;
+}
 .noren-top
 {
     background-color: #640125;
