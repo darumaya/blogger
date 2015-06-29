@@ -662,7 +662,7 @@
 
                     <div class="media">
                         <div class="pull-left">
-                            <a href="#">
+                            <a expr:href='data:post.url'>
                                 <b:if cond='data:post.thumbnailUrl'>
                                     <script>
                                         document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;));
@@ -680,13 +680,14 @@
 
                             <b:if cond='data:post.title'>
                                 <h2 class='media-heading' itemprop='name'>
-                                    <data:post.title/>
+                                    <a expr:href='data:post.url'><data:post.title/></a>
                                 </h2>
                                 <b:else/>
                             </b:if>
 
                             <b:if cond='data:post.snippet'>
                                 <p class="lead"><data:post.snippet/></p>
+                                <p class="lead pull-right"><a expr:href='data:post.url'>続きを読む</a></p>
                                 <b:else/>
                             </b:if>
                         </div>
