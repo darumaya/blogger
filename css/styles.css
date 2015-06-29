@@ -128,8 +128,8 @@ fieldset[disabled] .btn-aqua.active
     width: 360px;
     height: 240px;
 
-    -webkit-background-size: contain;
-            background-size: contain;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .noren-top
 {
