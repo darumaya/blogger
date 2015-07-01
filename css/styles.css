@@ -127,6 +127,11 @@ fieldset[disabled] .btn-aqua.active
 {
     padding-bottom: 66.67%;
 }
+.Blog .embed-responsive-item
+{
+    -webkit-background-size: cover;
+            background-size: cover;
+}
 .Blog .media-object
 {
     width: 360px;
