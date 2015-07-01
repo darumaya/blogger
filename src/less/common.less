@@ -73,7 +73,20 @@ span {
       padding-right: 30px;
     }
   }
+  .list-group-item-text {
+    @media (min-width: @screen-lg-min) {
+    }
+  }
   .list-group-item-thumbnail {
-    width: 360px;
+    width: 120px;
+    @media (min-width: @screen-sm-min) {
+      width: 360px;
+    }
+    @media (min-width: @screen-md-min) {
+      width: 360px;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 360px;
+    }
   }
 }

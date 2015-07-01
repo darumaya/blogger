@@ -1,4 +1,4 @@
-<div class='main'>
+<main>
     <b:section class='main' id='main' preferred='yes' showaddelement='yes'>
         <b:widget id='Blog1' locked='true' title='ブログの投稿' type='Blog'>
             <b:includable id='main' var='top'>
@@ -544,7 +544,7 @@
                     <b:else/>
 
                     <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-sm-7 col-md-5 col-lg-4">
                             <a expr:href='data:post.url'>
                                 <b:if cond='data:post.thumbnailUrl'>
                                     <script>
@@ -555,7 +555,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xs-8">
+                        <div class="col-sm-5 col-md-7 col-lg-8">
                             <b:if cond='data:post.dateHeader'>
                                 <h4><data:post.dateHeader/></h4>
                                 <b:else/>
@@ -569,8 +569,8 @@
                             </b:if>
 
                             <b:if cond='data:post.snippet'>
-                                <p class="lead"><data:post.snippet/></p>
-                                <p class="lead pull-right"><a expr:href='data:post.url'>続きを読む</a></p>
+                                <p><data:post.snippet/></p>
+                                <p class="pull-right"><a expr:href='data:post.url'>続きを読む</a></p>
                                 <b:else/>
                             </b:if>
                         </div>
@@ -611,7 +611,7 @@
             <b:includable id='post3' var='post'>
                 <a class="thumbnail" expr:href='data:post.url'>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-7 col-md-5 col-lg-4">
                             <b:if cond='data:post.thumbnailUrl'>
                                 <script>
                                     document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;));
@@ -619,7 +619,7 @@
                                 <b:else/>
                             </b:if>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-5 col-md-7 col-lg-8">
                             <div class="caption">
                                 <b:if cond='data:post.dateHeader'>
                                     <h4><data:post.dateHeader/></h4>
@@ -632,7 +632,7 @@
                                     <b:else/>
                                 </b:if>
                                 <b:if cond='data:post.snippet'>
-                                    <p class="lead"><data:post.snippet/></p>
+                                    <p><data:post.snippet/></p>
                                     <b:else/>
                                 </b:if>
                             </div>
@@ -896,4 +896,4 @@
             </b:includable>
         </b:widget>
     </b:section>
-</div>
+</main>

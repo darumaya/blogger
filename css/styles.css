@@ -138,7 +138,28 @@ fieldset[disabled] .btn-aqua.active
 }
 .Blog .list-group-item-thumbnail
 {
-    width: 360px;
+    width: 120px;
+}
+@media (min-width: 768px)
+{
+    .Blog .list-group-item-thumbnail
+    {
+        width: 360px;
+    }
+}
+@media (min-width: 992px)
+{
+    .Blog .list-group-item-thumbnail
+    {
+        width: 360px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .Blog .list-group-item-thumbnail
+    {
+        width: 360px;
+    }
 }
 .noren-top
 {
