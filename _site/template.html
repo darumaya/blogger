@@ -144,8 +144,11 @@
                     <b:if cond='data:blog.pageType != &quot;item&quot;'>
                         <script>
                             //<![CDATA[
-                            function thumbnail(src, alt) {
-                                var img = "<div style='background-image:url({src})' title='{alt}' class='media-object thumbnail-3by2'></div>";
+                            function thumbnail(src, alt, classes) {
+                                classes = classes || '';
+                                var img = '<div class="embed-responsive embed-responsive-3by2 ' + classes + '">'
+                                        + "<div style='background-image:url({src})' title='{alt}' class='embed-responsive-item'></div>"
+                                        + '</div>';
                                 src = src.replace('/s72-c/', '/s360/');
                                 img = img.replace('{src}', src).replace('{alt}', alt);
                                 return img;
@@ -157,6 +160,18 @@
                     <b:loop values='data:posts' var='post'>
 
                         <b:include data='post' name='post'/>
+
+                    </b:loop>
+
+                    <b:loop values='data:posts' var='post'>
+
+                        <b:include data='post' name='post2'/>
+
+                    </b:loop>
+
+                    <b:loop values='data:posts' var='post'>
+
+                        <b:include data='post' name='post3'/>
 
                     </b:loop>
 
@@ -660,8 +675,8 @@
 
                     <b:else/>
 
-                    <div class="media">
-                        <div class="pull-left">
+                    <div class="row">
+                        <div class="col-xs-4">
                             <a expr:href='data:post.url'>
                                 <b:if cond='data:post.thumbnailUrl'>
                                     <script>
@@ -672,14 +687,14 @@
                             </a>
                         </div>
 
-                        <div class="media-body">
+                        <div class="col-xs-8">
                             <b:if cond='data:post.dateHeader'>
-                                <h4 class='media-heading'><data:post.dateHeader/></h4>
+                                <h4><data:post.dateHeader/></h4>
                                 <b:else/>
                             </b:if>
 
                             <b:if cond='data:post.title'>
-                                <h2 class='media-heading' itemprop='name'>
+                                <h2 itemprop='name'>
                                     <a expr:href='data:post.url'><data:post.title/></a>
                                 </h2>
                                 <b:else/>
@@ -695,6 +710,74 @@
 
                 </b:if>
 
+            </b:includable>
+            <b:includable id='post2' var='post'>
+                <div class="media">
+                    <div class="pull-left">
+                        <a expr:href='data:post.url'>
+                            <b:if cond='data:post.thumbnailUrl'>
+                                <script>
+                                    document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;media-object&quot;));
+                                </script>
+                                <b:else/>
+                            </b:if>
+                        </a>
+                    </div>
+
+                    <div class="media-body">
+                        <b:if cond='data:post.dateHeader'>
+                            <h4 class='media-heading'><data:post.dateHeader/></h4>
+                            <b:else/>
+                        </b:if>
+
+                        <b:if cond='data:post.title'>
+                            <h2 class='media-heading' itemprop='name'>
+                                <a expr:href='data:post.url'><data:post.title/></a>
+                            </h2>
+                            <b:else/>
+                        </b:if>
+
+                        <b:if cond='data:post.snippet'>
+                            <p class="lead"><data:post.snippet/></p>
+                            <p class="lead pull-right"><a expr:href='data:post.url'>続きを読む</a></p>
+                            <b:else/>
+                        </b:if>
+                    </div>
+                </div>
+            </b:includable>
+            <b:includable id='post3' var='post'>
+                <div class="media">
+                    <div class="pull-left">
+                        <a expr:href='data:post.url'>
+                            <b:if cond='data:post.thumbnailUrl'>
+                                <script>
+                                    document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;));
+                                </script>
+                                <b:else/>
+                            </b:if>
+                        </a>
+                    </div>
+
+                    <div class="media-body">
+                        <b:if cond='data:post.dateHeader'>
+                            <h4 class='media-heading'><data:post.dateHeader/></h4>
+                            <b:else/>
+                        </b:if>
+
+                        <b:if cond='data:post.title'>
+                            <h2 class='media-heading' itemprop='name'>
+                                <a expr:href='data:post.url'><data:post.title/></a>
+                            </h2>
+                            <b:else/>
+                        </b:if>
+
+                        <b:if cond='data:post.snippet'>
+                            <p class="lead"><data:post.snippet/></p>
+                            <p class="lead pull-right"><a expr:href='data:post.url'>続きを読む</a></p>
+                            <b:else/>
+                        </b:if>
+                    </div>
+                </div>
             </b:includable>
             <b:includable id='postQuickEdit' var='post'>
                 <b:if cond='data:post.editUrl'>
