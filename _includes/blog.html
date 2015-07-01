@@ -26,21 +26,17 @@
                     </b:if>
 
                     <b:loop values='data:posts' var='post'>
-
                         <b:include data='post' name='post'/>
-
                     </b:loop>
 
+                    <div class="list-group">
+                        <b:loop values='data:posts' var='post'>
+                            <b:include data='post' name='post2'/>
+                        </b:loop>
+                    </div>
+
                     <b:loop values='data:posts' var='post'>
-
-                        <b:include data='post' name='post2'/>
-
-                    </b:loop>
-
-                    <b:loop values='data:posts' var='post'>
-
                         <b:include data='post' name='post3'/>
-
                     </b:loop>
 
                     <b:if cond='data:numPosts != 0'>
@@ -580,38 +576,33 @@
 
             </b:includable>
             <b:includable id='post2' var='post'>
-                <div class="media">
+                <a class="list-group-item" expr:href='data:post.url'>
                     <div class="pull-left">
-                        <a expr:href='data:post.url'>
-                            <b:if cond='data:post.thumbnailUrl'>
-                                <script>
-                                    document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;media-object&quot;));
-                                </script>
-                                <b:else/>
-                            </b:if>
-                        </a>
-                    </div>
-
-                    <div class="media-body">
-                        <b:if cond='data:post.dateHeader'>
-                            <h4 class='media-heading'><data:post.dateHeader/></h4>
-                            <b:else/>
-                        </b:if>
-
-                        <b:if cond='data:post.title'>
-                            <h2 class='media-heading' itemprop='name'>
-                                <a expr:href='data:post.url'><data:post.title/></a>
-                            </h2>
-                            <b:else/>
-                        </b:if>
-
-                        <b:if cond='data:post.snippet'>
-                            <p class="lead"><data:post.snippet/></p>
-                            <p class="lead pull-right"><a expr:href='data:post.url'>続きを読む</a></p>
+                        <b:if cond='data:post.thumbnailUrl'>
+                            <script>
+                                document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;list-group-item-thumbnail&quot;));
+                            </script>
                             <b:else/>
                         </b:if>
                     </div>
-                </div>
+
+                    <b:if cond='data:post.dateHeader'>
+                        <h4 class='list-group-item-heading'><data:post.dateHeader/></h4>
+                        <b:else/>
+                    </b:if>
+
+                    <b:if cond='data:post.title'>
+                        <h2 class='list-group-item-heading' itemprop='name'>
+                            <data:post.title/>
+                        </h2>
+                        <b:else/>
+                    </b:if>
+
+                    <b:if cond='data:post.snippet'>
+                        <p class="list-group-item-text"><data:post.snippet/></p>
+                        <b:else/>
+                    </b:if>
+                </a>
             </b:includable>
             <b:includable id='post3' var='post'>
                 <div class="media">
