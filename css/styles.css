@@ -279,6 +279,8 @@ fieldset[disabled] .btn-aqua.active
 }
 .noren-bottom
 {
+    margin-bottom: 30px;
+
     background-color: #640125;
 }
 @media (min-width: 768px)

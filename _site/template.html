@@ -161,11 +161,15 @@
                         <b:include data='post' name='post'/>
                     </b:loop>
 
+                    <hr/>
+
                     <div class="list-group">
                         <b:loop values='data:posts' var='post'>
                             <b:include data='post' name='post2'/>
                         </b:loop>
                     </div>
+
+                    <hr/>
 
                     <b:loop values='data:posts' var='post'>
                         <b:include data='post' name='post3'/>
@@ -737,38 +741,36 @@
                 </a>
             </b:includable>
             <b:includable id='post3' var='post'>
-                <div class="media">
-                    <div class="pull-left">
-                        <a expr:href='data:post.url'>
+                <a class="thumbnail" expr:href='data:post.url'>
+                    <div class="row">
+                        <div class="col-sm-4">
                             <b:if cond='data:post.thumbnailUrl'>
                                 <script>
                                     document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;));
                                 </script>
                                 <b:else/>
                             </b:if>
-                        </a>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="caption">
+                                <b:if cond='data:post.dateHeader'>
+                                    <h4><data:post.dateHeader/></h4>
+                                    <b:else/>
+                                </b:if>
+                                <b:if cond='data:post.title'>
+                                    <h2 itemprop='name'>
+                                        <data:post.title/>
+                                    </h2>
+                                    <b:else/>
+                                </b:if>
+                                <b:if cond='data:post.snippet'>
+                                    <p class="lead"><data:post.snippet/></p>
+                                    <b:else/>
+                                </b:if>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="media-body">
-                        <b:if cond='data:post.dateHeader'>
-                            <h4 class='media-heading'><data:post.dateHeader/></h4>
-                            <b:else/>
-                        </b:if>
-
-                        <b:if cond='data:post.title'>
-                            <h2 class='media-heading' itemprop='name'>
-                                <a expr:href='data:post.url'><data:post.title/></a>
-                            </h2>
-                            <b:else/>
-                        </b:if>
-
-                        <b:if cond='data:post.snippet'>
-                            <p class="lead"><data:post.snippet/></p>
-                            <p class="lead pull-right"><a expr:href='data:post.url'>続きを読む</a></p>
-                            <b:else/>
-                        </b:if>
-                    </div>
-                </div>
+                </a>
             </b:includable>
             <b:includable id='postQuickEdit' var='post'>
                 <b:if cond='data:post.editUrl'>
