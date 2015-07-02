@@ -133,6 +133,7 @@ fieldset[disabled] .btn-aqua.active
 }
 .Blog .embed-responsive-item
 {
+    background-position: center center;
     -webkit-background-size: cover;
             background-size: cover;
 }
