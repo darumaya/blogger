@@ -175,7 +175,7 @@ fieldset[disabled] .btn-aqua.active
 
     color: #333;
 }
-.Blog .col-link :hover
+.Blog .col-link:hover
 {
     color: #29869d;
 }
