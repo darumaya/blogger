@@ -169,6 +169,10 @@ fieldset[disabled] .btn-aqua.active
         width: 360px;
     }
 }
+.Blog .col-link
+{
+    color: #333;
+}
 .noren-top
 {
     background-color: #640125;
