@@ -70,7 +70,9 @@ span {
   }
   .list-group-item {
     .pull-left {
-      padding-right: 30px;
+      @media (min-width: @screen-sm-min) {
+        padding-right: 30px;
+      }
     }
   }
   .list-group-item-text {
@@ -78,7 +80,7 @@ span {
     }
   }
   .list-group-item-thumbnail {
-    width: 120px;
+    width: 300px;
     @media (min-width: @screen-sm-min) {
       width: 360px;
     }

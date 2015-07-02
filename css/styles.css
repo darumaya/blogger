@@ -132,13 +132,16 @@ fieldset[disabled] .btn-aqua.active
     -webkit-background-size: cover;
             background-size: cover;
 }
-.Blog .list-group-item .pull-left
+@media (min-width: 768px)
 {
-    padding-right: 30px;
+    .Blog .list-group-item .pull-left
+    {
+        padding-right: 30px;
+    }
 }
 .Blog .list-group-item-thumbnail
 {
-    width: 120px;
+    width: 300px;
 }
 @media (min-width: 768px)
 {
