@@ -171,7 +171,13 @@ fieldset[disabled] .btn-aqua.active
 }
 .Blog .col-link
 {
+    text-decoration: none;
+
     color: #333;
+}
+.Blog .col-link :hover
+{
+    color: #29869d;
 }
 .noren-top
 {
