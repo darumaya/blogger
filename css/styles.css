@@ -169,12 +169,12 @@ fieldset[disabled] .btn-aqua.active
         width: 360px;
     }
 }
-.Blog :hover .embed-responsive-item
+.Blog a:hover .embed-responsive-item
 {
     -webkit-filter: brightness(120%);
             filter: brightness(120%);
 }
-.Blog :hover .list-group-item-thumbnail
+.Blog a:hover .list-group-item-thumbnail
 {
     -webkit-filter: brightness(120%);
             filter: brightness(120%);
