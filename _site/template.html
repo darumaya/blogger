@@ -146,7 +146,7 @@
                             //<![CDATA[
                             function thumbnail(src, alt, classes) {
                                 classes = classes || '';
-                                var img = '<div class="embed-responsive embed-responsive-3by2 ' + classes + '">'
+                                var img = '<div class="embed-responsive ' + classes + '">'
                                         + "<div style='background-image:url({src})' title='{alt}' class='embed-responsive-item'></div>"
                                         + '</div>';
                                 src = src.replace('/s72-c/', '/s360/');
@@ -172,6 +172,10 @@
 
                     <b:loop values='data:posts' var='post'>
                         <b:include data='post' name='post3'/>
+                    </b:loop>
+
+                    <b:loop values='data:posts' var='post'>
+                        <b:include data='post' name='post4'/>
                     </b:loop>
 
                     <b:if cond='data:numPosts != 0'>
@@ -679,7 +683,7 @@
                             <a expr:href='data:post.url'>
                                 <b:if cond='data:post.thumbnailUrl'>
                                     <script>
-                                        document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;));
+                                        document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-3by2&quot;));
                                     </script>
                                     <b:else/>
                                 </b:if>
@@ -745,7 +749,7 @@
                         <div class="col-sm-7 col-md-5 col-lg-4">
                             <b:if cond='data:post.thumbnailUrl'>
                                 <script>
-                                    document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;));
+                                    document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-3by2&quot;));
                                 </script>
                                 <b:else/>
                             </b:if>
@@ -770,6 +774,37 @@
                         </div>
                     </div>
                 </a>
+            </b:includable>
+            <b:includable id='post4' var='post'>
+
+                <div class="row">
+                    <a expr:href='data:post.url' class="col-sm-6">
+                        <b:if cond='data:post.thumbnailUrl'>
+                            <script>
+                                document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-2by1&quot;));
+                            </script>
+                            <b:else/>
+                        </b:if>
+                        <b:if cond='data:post.dateHeader'>
+                            <h4><data:post.dateHeader/></h4>
+                            <b:else/>
+                        </b:if>
+
+                        <b:if cond='data:post.title'>
+                            <h2 itemprop='name'>
+                                <data:post.title/>
+                            </h2>
+                            <b:else/>
+                        </b:if>
+
+                        <b:if cond='data:post.snippet'>
+                            <p><data:post.snippet/><span class="text-muted glyphicon glyphicon-chevron-right"></span></p>
+                            <b:else/>
+                        </b:if>
+                    </a>
+                </div>
+
+
             </b:includable>
             <b:includable id='postQuickEdit' var='post'>
                 <b:if cond='data:post.editUrl'>
