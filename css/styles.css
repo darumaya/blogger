@@ -189,6 +189,14 @@ fieldset[disabled] .btn-aqua.active
 {
     color: #29869d;
 }
+.Blog .text-more
+{
+    color: #777;
+}
+.Blog .text-more:hover
+{
+    color: #29869d;
+}
 .noren-top
 {
     background-color: #640125;
