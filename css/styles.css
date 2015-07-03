@@ -169,6 +169,24 @@ fieldset[disabled] .btn-aqua.active
         width: 360px;
     }
 }
+.Blog .col-link
+{
+    text-decoration: none;
+
+    color: #333;
+}
+.Blog .col-link .text-more
+{
+    color: #777;
+}
+.Blog .col-link:hover
+{
+    color: #29869d;
+}
+.Blog .col-link:hover .text-more
+{
+    color: #29869d;
+}
 .Blog a:hover .embed-responsive-item
 {
     -webkit-filter: brightness(120%);
@@ -178,24 +196,6 @@ fieldset[disabled] .btn-aqua.active
 {
     -webkit-filter: brightness(120%);
             filter: brightness(120%);
-}
-.Blog .col-link
-{
-    text-decoration: none;
-
-    color: #333;
-}
-.Blog .col-link:hover
-{
-    color: #29869d;
-}
-.Blog .text-more
-{
-    color: #777;
-}
-.Blog .text-more:hover
-{
-    color: #29869d;
 }
 .Blog h2
 {

@@ -95,25 +95,28 @@ span {
       width: 360px;
     }
   }
+  .col-link {
+    color: @text-color;
+    text-decoration: none;
+
+    .text-more {
+      color: @gray-light;
+    }
+
+    &:hover {
+      color: @link-hover-color;
+
+      .text-more {
+        color: @link-hover-color;
+      }
+    }
+  }
   a:hover {
     .embed-responsive-item {
       filter: brightness(120%);
     }
     .list-group-item-thumbnail {
       filter: brightness(120%);
-    }
-  }
-  .col-link {
-    color: @text-color;
-    text-decoration: none;
-    &:hover {
-      color: @link-hover-color;
-    }
-  }
-  .text-more {
-    color: @gray-light;
-    &:hover {
-      color: @link-hover-color;
     }
   }
   h2 {
