@@ -139,6 +139,8 @@ fieldset[disabled] .btn-aqua.active
 }
 .Blog .row-link
 {
+    display: block;
+
     text-decoration: none;
 
     color: #333;
