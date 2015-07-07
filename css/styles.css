@@ -162,7 +162,7 @@ fieldset[disabled] .btn-aqua.active
 
     margin-top: 10px;
 }
-.Blog .posts:last-child hr
+.Blog .posts hr:last-child
 {
     display: none;
 }
