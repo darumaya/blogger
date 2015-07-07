@@ -137,6 +137,10 @@ fieldset[disabled] .btn-aqua.active
     -webkit-background-size: cover;
             background-size: cover;
 }
+.Blog .text-more
+{
+    color: #ccc;
+}
 .Blog .row-link
 {
     display: block;
