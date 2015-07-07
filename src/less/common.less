@@ -77,16 +77,14 @@ span {
     color: @text-color;
     text-decoration: none;
 
-    &:hover {
-      .col-thumbnail,
+    &:hover,
+    &:active {
+      .embed-responsive-item {
+        filter: brightness(90%);
+      }
       .col-post {
         background-color: @list-group-hover-bg;
       }
-    }
-  }
-  .row-link:hover {
-    .embed-responsive-item {
-      filter: brightness(90%);
     }
   }
   h2 {
