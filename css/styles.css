@@ -145,15 +145,16 @@ fieldset[disabled] .btn-aqua.active
 
     color: #333;
 }
-.Blog .row-link:hover .col-thumbnail,
-.Blog .row-link:hover .col-post
-{
-    background-color: #f5f5f5;
-}
-.Blog .row-link:hover .embed-responsive-item
+.Blog .row-link:hover .embed-responsive-item,
+.Blog .row-link:active .embed-responsive-item
 {
     -webkit-filter: brightness(90%);
             filter: brightness(90%);
+}
+.Blog .row-link:hover .col-post,
+.Blog .row-link:active .col-post
+{
+    background-color: #f5f5f5;
 }
 .Blog h2
 {
