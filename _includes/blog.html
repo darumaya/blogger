@@ -27,29 +27,6 @@
 
                     <b:loop values='data:posts' var='post'>
                         <b:include data='post' name='post'/>
-                        <hr/>
-                    </b:loop>
-
-                    <div class="list-group">
-                        <b:loop values='data:posts' var='post'>
-                            <b:include data='post' name='post2'/>
-                        </b:loop>
-                    </div>
-
-                    <hr/>
-
-                    <b:loop values='data:posts' var='post'>
-                        <b:include data='post' name='post3'/>
-                    </b:loop>
-
-                    <div class="row">
-                        <b:loop values='data:posts' var='post'>
-                            <b:include data='post' name='post4'/>
-                        </b:loop>
-                    </div>
-
-                    <b:loop values='data:posts' var='post'>
-                        <b:include data='post' name='post5'/>
                     </b:loop>
 
                     <b:if cond='data:numPosts != 0'>
@@ -551,69 +528,38 @@
                     </b:if>
 
                     <b:else/>
-                    
+
+                    <a expr:href='data:post.url' class="row row-link">
+                        <div class="col-sm-1">
+                            <b:if cond='data:post.dateHeader'>
+                                <h5><data:post.dateHeader/></h5>
+                                <b:else/>
+                            </b:if>
+                        </div>
+                        <div class="col-sm-7 col-md-5 col-lg-4">
+                            <b:if cond='data:post.thumbnailUrl'>
+                                <script>
+                                    document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-2by1&quot;));
+                                </script>
+                                <b:else/>
+                            </b:if>
+                        </div>
+                        <div class="col-sm-4 col-md-6 col-lg-7">
+                            <b:if cond='data:post.title'>
+                                <h2 itemprop='name'>
+                                    <data:post.title/>
+                                </h2>
+                                <b:else/>
+                            </b:if>
+
+                            <b:if cond='data:post.snippet'>
+                                <p><data:post.snippet/><span class="text-more glyphicon glyphicon-chevron-right"></span></p>
+                                <b:else/>
+                            </b:if>
+                        </div>
+                    </a>
+
                 </b:if>
-
-            </b:includable>
-            <b:includable id='post4' var='post'>
-
-                <a expr:href='data:post.url' class="col-sm-6 col-link">
-                    <b:if cond='data:post.thumbnailUrl'>
-                        <script>
-                            document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-2by1&quot;));
-                        </script>
-                        <b:else/>
-                    </b:if>
-                    <b:if cond='data:post.dateHeader'>
-                        <h5><data:post.dateHeader/></h5>
-                        <b:else/>
-                    </b:if>
-
-                    <b:if cond='data:post.title'>
-                        <h2 itemprop='name'>
-                            <data:post.title/>
-                        </h2>
-                        <b:else/>
-                    </b:if>
-
-                    <b:if cond='data:post.snippet'>
-                        <p><data:post.snippet/><span class="text-more glyphicon glyphicon-chevron-right"></span></p>
-                        <b:else/>
-                    </b:if>
-                </a>
-
-
-            </b:includable>
-            <b:includable id='post5' var='post'>
-
-                <a expr:href='data:post.url' class="row col-link">
-                    <div class="col-sm-7 col-md-5 col-lg-4">
-                        <b:if cond='data:post.thumbnailUrl'>
-                            <script>
-                                document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-2by1&quot;));
-                            </script>
-                            <b:else/>
-                        </b:if>
-                    </div>
-                    <div class="col-sm-5 col-md-7 col-lg-8">
-                        <b:if cond='data:post.dateHeader'>
-                            <h5><data:post.dateHeader/></h5>
-                            <b:else/>
-                        </b:if>
-
-                        <b:if cond='data:post.title'>
-                            <h2 itemprop='name'>
-                                <data:post.title/>
-                            </h2>
-                            <b:else/>
-                        </b:if>
-
-                        <b:if cond='data:post.snippet'>
-                            <p><data:post.snippet/><span class="text-more glyphicon glyphicon-chevron-right"></span></p>
-                            <b:else/>
-                        </b:if>
-                    </div>
-                </a>
 
             </b:includable>
             <b:includable id='postQuickEdit' var='post'>
