@@ -536,7 +536,7 @@
                                 <b:else/>
                             </b:if>
                         </div>
-                        <div class="col-sm-7 col-md-5 col-lg-4">
+                        <div class="col-sm-7 col-md-5 col-lg-4 col-thumbnail">
                             <b:if cond='data:post.thumbnailUrl'>
                                 <script>
                                     document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-2by1&quot;));
@@ -544,7 +544,7 @@
                                 <b:else/>
                             </b:if>
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-7">
+                        <div class="col-sm-4 col-md-6 col-lg-7 col-post">
                             <b:if cond='data:post.title'>
                                 <h2 itemprop='name'>
                                     <data:post.title/>
@@ -558,6 +558,7 @@
                             </b:if>
                         </div>
                     </a>
+                    <hr/>
 
                 </b:if>
 

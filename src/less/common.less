@@ -78,8 +78,10 @@ span {
     text-decoration: none;
 
     &:hover {
-      // color: @link-hover-color;
-      background-color: @list-group-hover-bg;
+      .col-thumbnail,
+      .col-post {
+        background-color: @list-group-hover-bg;
+      }
     }
   }
   .row-link:hover {
@@ -90,5 +92,8 @@ span {
   h2 {
     margin-top: (@line-height-computed / 2);
     font-family: @font-family-serif;
+  }
+  hr:last {
+    display: none;
   }
 }
