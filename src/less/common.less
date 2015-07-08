@@ -8,7 +8,8 @@ body {
   background-color: @bg-color;
 }
 
-main {
+main,
+.main {
   font-size: @font-size-less-large;
 }
 
@@ -94,5 +95,15 @@ span {
   }
   .posts hr:last-child {
     display: none;
+  }
+}
+
+.category {
+  a.thumbnail {
+    &:hover,
+    &:active {
+      text-decoration: none;
+      background-color: @list-group-hover-bg;
+    }
   }
 }
