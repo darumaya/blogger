@@ -35,6 +35,26 @@
                             </div>
 
                             <b:include name='quickedit'/>
+                            <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                                <!-- Blog feed links -->
+                                <b:if cond='data:feedLinks'>
+                                    <div class='blog-feeds container'>
+                                        <b:include data='feedLinks' name='feedLinksBody'/>
+                                    </div>
+                                </b:if>
+
+                                <b:else/>
+                                <!--Post feed links -->
+                                <div class='post-feeds container'>
+                                    <b:loop values='data:posts' var='post'>
+                                        <b:if cond='data:post.allowComments'>
+                                            <b:if cond='data:post.feedLinks'>
+                                                <b:include data='post.feedLinks' name='feedLinksBody'/>
+                                            </b:if>
+                                        </b:if>
+                                    </b:loop>
+                                </div>
+                            </b:if>
                         </div>
                     </b:includable>
                 </b:widget>

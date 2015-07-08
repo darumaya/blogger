@@ -250,24 +250,6 @@
                 </div>
             </b:includable>
             <b:includable id='feedLinks'>
-                <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
-                    <b:if cond='data:feedLinks'>
-                        <div class='blog-feeds container'>
-                            <b:include data='feedLinks' name='feedLinksBody'/>
-                        </div>
-                    </b:if>
-
-                    <b:else/> <!--Post feed links -->
-                    <div class='post-feeds container'>
-                        <b:loop values='data:posts' var='post'>
-                            <b:if cond='data:post.allowComments'>
-                                <b:if cond='data:post.feedLinks'>
-                                    <b:include data='post.feedLinks' name='feedLinksBody'/>
-                                </b:if>
-                            </b:if>
-                        </b:loop>
-                    </div>
-                </b:if>
             </b:includable>
             <b:includable id='feedLinksBody' var='links'>
                 <div class='feed-links'>
@@ -297,21 +279,17 @@
             <b:includable id='mobile-post' var='post'>
             </b:includable>
             <b:includable id='nextprev'>
-                <div class='blog-pager' id='blog-pager'>
-                    <b:if cond='data:newerPageUrl'>
-                              <span id='blog-pager-newer-link'>
-                              <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
-                              </span>
-                    </b:if>
-
-                    <b:if cond='data:olderPageUrl'>
-                              <span id='blog-pager-older-link'>
-                              <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
-                              </span>
-                    </b:if>
-
-                    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
-
+                <div class='row'>
+                    <div class='col-xs-6'>
+                        <b:if cond='data:newerPageUrl'>
+                          <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><span class="glyphicon glyphicon-chevron-left"></span>新しい投稿</a>
+                        </b:if>
+                    </div>
+                    <div class='col-xs-6 text-right'>
+                        <b:if cond='data:olderPageUrl'>
+                          <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>古い投稿<span class="glyphicon glyphicon-chevron-right"></span></a>
+                        </b:if>
+                    </div>
                 </div>
             </b:includable>
             <b:includable id='post' var='post'>
@@ -531,13 +509,13 @@
                     <b:else/>
 
                     <a expr:href='data:post.url' class="row row-link">
-                        <div class="col-sm-1 col-date">
+                        <div class="col-md-1 col-date">
                             <b:if cond='data:post.dateHeader'>
                                 <h5><data:post.dateHeader/></h5>
                                 <b:else/>
                             </b:if>
                         </div>
-                        <div class="col-sm-7 col-md-5 col-lg-4">
+                        <div class="col-sm-6 col-md-5 col-lg-4">
                             <b:if cond='data:post.thumbnailUrl'>
                                 <script>
                                     document.write(thumbnail(&quot;<data:post.thumbnailUrl/>&quot;, &quot;<data:post.title/>&quot;, &quot;embed-responsive-2by1&quot;));
@@ -545,7 +523,7 @@
                                 <b:else/>
                             </b:if>
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-7">
+                        <div class="col-sm-6 col-md-6 col-lg-7">
                             <b:if cond='data:post.title'>
                                 <h2 itemprop='name'>
                                     <data:post.title/>
@@ -554,7 +532,8 @@
                             </b:if>
 
                             <b:if cond='data:post.snippet'>
-                                <p><data:post.snippet/><span class="text-more glyphicon glyphicon-chevron-right"></span></p>
+                                <p><data:post.snippet/>
+                                    <span class="text-more glyphicon glyphicon-chevron-right"></span></p>
                                 <b:else/>
                             </b:if>
                         </div>
