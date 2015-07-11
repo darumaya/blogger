@@ -8,6 +8,10 @@ body {
   background-color: @bg-color;
 }
 
+//
+// main
+//
+
 main,
 .main {
   font-size: @font-size-less-large;
@@ -98,12 +102,35 @@ span {
   }
 }
 
-.category {
+//
+// aside
+//
+
+aside {
+  font-size: @font-size-less-large;
+}
+
+.categories {
+  h3 {
+    font-family: @font-family-serif;
+  }
   a.thumbnail {
     &:hover,
     &:active {
       text-decoration: none;
       background-color: @list-group-hover-bg;
     }
+  }
+}
+
+.static-pages {
+  h3 {
+    font-family: @font-family-serif;
+  }
+}
+
+.archives {
+  h3 {
+    font-family: @font-family-serif;
   }
 }
