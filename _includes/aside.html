@@ -1,6 +1,6 @@
 <aside>
     <div class='container categories'>
-        <h3>カテゴリ</h3>
+        <h2>カテゴリ</h2>
         <div class="row">
             <b:section id='aside1-1' preferred='yes' showaddelement='yes'>
                 <b:widget id='HTML5' locked='false' title='洗い張り' type='HTML'>
@@ -59,9 +59,9 @@
                         <div class="col-sm-6">
                             <!-- only display title if it's non-empty -->
                             <b:if cond='data:title != &quot;&quot;'>
-                                <h3 class='title'>
+                                <h2 class='title'>
                                     <data:title/>
-                                </h3>
+                                </h2>
                             </b:if>
                             <data:content/>
 
@@ -74,9 +74,9 @@
                         <div class="col-sm-6">
                             <!-- only display title if it's non-empty -->
                             <b:if cond='data:title != &quot;&quot;'>
-                                <h3 class='title'>
+                                <h2 class='title'>
                                     <data:title/>
-                                </h3>
+                                </h2>
                             </b:if>
                             <data:content/>
 
@@ -95,9 +95,9 @@
                     <b:includable id='main'>
                         <div class="col-sm-4">
                             <b:if cond='data:title != &quot;&quot;'>
-                                <h3 class='title'>
+                                <h2 class='title'>
                                     <data:title/>
-                                </h3>
+                                </h2>
                             </b:if>
                             <div class='widget-content' expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
                                 <a expr:href='data:feedUrl'>
@@ -112,9 +112,9 @@
                     <b:includable id='main'>
                         <div class="col-sm-4">
                             <b:if cond='data:title != &quot;&quot;'>
-                                <h3>
+                                <h2>
                                     <data:title/>
-                                </h3>
+                                </h2>
                                 <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
                                     <b:if cond='data:display == &quot;list&quot;'>
                                         <ul>
