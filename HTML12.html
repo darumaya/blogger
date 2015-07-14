@@ -1,0 +1,44 @@
+<script>
+    function blogFeed(json) {
+        console.log(json);
+        for (var i in json.feed.entry) {
+            var entryItem = json.feed.entry[i];
+            var title = entryItem.title.$t;
+            var author = entryItem.author[0].name.$t;
+            var dateString = entryItem.published.$t.replace(/^\d{4}\-0?(\d{1,2})\-0?(\d{1,2}).*$/, '$1/$2');
+            for (var j in entryItem.link) {
+                var linkItem = entryItem.link[j];
+                if (linkItem.rel === 'alternate' && linkItem.type === 'text/html') {
+                    var url = linkItem.href;
+                }
+            }
+            $('<h5>')
+                    .addClass('text-muted')
+                    .text(dateString)
+                    .appendTo('#blogFeed');
+            $('<div>')
+                    .addClass('text-muted recent-comment-author')
+                    .text(author)
+                    .appendTo('#blogFeed');
+            $('<a>')
+                    .addClass('list-group-item')
+                    .attr('href', url)
+                    .css('clear', 'both')
+                    .html(title)
+                    .wrap('<div class="list-group">')
+                    .parent()
+                    .appendTo('#blogFeed');
+        }
+    }
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.defer = 'defer';
+        js.async = 'async';
+        js.src = "//blog.darumaya-gofuku.jp/feeds/comments/summary?alt=json-in-script&callback=blogFeed&max-results=5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'getBlogFeed'));
+</script>
+<div id="blogFeed" class="list-group">
+</div>

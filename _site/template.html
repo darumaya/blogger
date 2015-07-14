@@ -1025,23 +1025,15 @@
     <div class="container archives">
         <div class="row">
             <b:section id='aside3' preferred='yes' showaddelement='yes'>
-                <b:widget id='Feed1' locked='false' title='最近のコメント' type='Feed'>
+                <b:widget id='HTML12' locked='false' title='最近のコメント' type='HTML'>
                     <b:includable id='main'>
                         <div class="col-sm-4">
-                            <!--
-                            <script id="getBlogFeed" defer="" async="" src="//blog.darumaya-gofuku.jp/feeds/posts/comment?alt=json-in-script&amp;callback=blogFeed&amp;max-results=5"></script>
-                            http://blog.darumaya-gofuku.jp/feeds/comments/summary?alt=json-in-script&amp;callback=blogFeed&amp;max-results=5
-                            -->
                             <b:if cond='data:title != &quot;&quot;'>
-                                <h2 class='title'>
+                                <h2>
                                     <data:title/>
                                 </h2>
                             </b:if>
-                            <div class='widget-content' expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
-                                <a expr:href='data:feedUrl'>
-                                    <data:loadingMsg/>
-                                </a>
-                            </div>
+                            <data:content/>
                             <b:include name='quickedit'/>
                         </div>
                     </b:includable>
