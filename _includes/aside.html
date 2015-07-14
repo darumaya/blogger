@@ -191,12 +191,11 @@
                         <b:loop values='data:intervalData' var='interval'>
                             <b:if cond='data:interval.toggleId'>
                                 <a expr:href='&quot;#collapse-&quot; + data:interval.toggleId' data-toggle="collapse" expr:class='&quot;list-group-item&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot;&quot; : &quot; collapsed&quot;)'>
-                                    <span class="collapse-label-show glyphicon glyphicon-chevron-down"></span>
-                                    <span class="collapse-label-hide glyphicon glyphicon-chevron-up"></span>
-                                    <data:interval.name/>
-                                    <span class="badge">
-                                        <data:interval.post-count/>
-                                    </span>
+                                    <h5 class="list-group-item-heading">
+                                        <span class="collapse-label-show glyphicon glyphicon-chevron-down"></span>
+                                        <span class="collapse-label-hide glyphicon glyphicon-chevron-up"></span>
+                                        <data:interval.name/>
+                                    </h5>
                                 </a>
                                 <div expr:class="&quot;collapse-group collapse&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; in&quot; : &quot;&quot;)" expr:id='&quot;collapse-&quot; + data:interval.toggleId'>
                                     <b:include cond='data:interval.data' data='interval.data' name='interval'/>
