@@ -191,7 +191,8 @@ aside a.panel-footer.collapsed > .panel-footer-label-hide
 {
     display: none;
 }
-aside .panel > .list-group:first-child .collapse > .list-group-item:first-child
+aside .panel > .list-group:first-child .collapse > .list-group-item:first-child,
+aside .panel > .list-group:first-child .collapsing > .list-group-item:first-child
 {
     border-top: 1px solid #ddd !important;
     border-top-left-radius: 0 !important;
