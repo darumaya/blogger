@@ -227,6 +227,10 @@ aside :not(.panel) > .list-group > .collapse-group:not(:last-child) > .list-grou
 {
     font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
 }
+.recent-comment-date
+{
+    margin: 0;
+}
 .recent-comment-author
 {
     font-size: 14px;
