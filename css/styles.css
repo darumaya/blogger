@@ -191,6 +191,12 @@ aside a.panel-footer.collapsed > .panel-footer-label-hide
 {
     display: none;
 }
+aside .collapse .list-group-item:first-child
+{
+    border-top: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
 .categories h2
 {
     font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
