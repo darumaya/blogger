@@ -1028,6 +1028,10 @@
                 <b:widget id='Feed1' locked='false' title='最近のコメント' type='Feed'>
                     <b:includable id='main'>
                         <div class="col-sm-4">
+                            <!--
+                            <script id="getBlogFeed" defer="" async="" src="//blog.darumaya-gofuku.jp/feeds/posts/comment?alt=json-in-script&amp;callback=blogFeed&amp;max-results=5"></script>
+                            http://blog.darumaya-gofuku.jp/feeds/comments/summary?alt=json-in-script&amp;callback=blogFeed&amp;max-results=5
+                            -->
                             <b:if cond='data:title != &quot;&quot;'>
                                 <h2 class='title'>
                                     <data:title/>
@@ -1049,40 +1053,40 @@
                                 <h2>
                                     <data:title/>
                                 </h2>
-                                <div class="panel panel-default">
-                                    <div class="list-group">
+                            </b:if>
+                            <div class="panel panel-default">
+                                <div class="list-group">
+                                    <b:loop values='data:labels' var='label' index='index'>
+                                        <b:if cond='data:index &lt; 5'>
+                                            <a expr:href='data:label.url' class="list-group-item">
+                                                <data:label.name/>
+                                                <b:if cond='data:showFreqNumbers'>
+                                                    <span class="badge"><data:label.count/></span>
+                                                </b:if>
+                                            </a>
+                                        </b:if>
+                                    </b:loop>
+
+                                    <div class="collapse" id="collapse-categories">
                                         <b:loop values='data:labels' var='label' index='index'>
-                                            <b:if cond='data:index &lt; 5'>
-                                                <div expr:dir='data:blog.languageDirection'  class="list-group-item">
+                                            <b:if cond='data:index &gt;= 5'>
+                                                <a expr:href='data:label.url' class="list-group-item">
                                                     <data:label.name/>
                                                     <b:if cond='data:showFreqNumbers'>
-                                                        <span dir='ltr' class="badge"><data:label.count/></span>
+                                                        <span class="badge"><data:label.count/></span>
                                                     </b:if>
-                                                </div>
+                                                </a>
                                             </b:if>
                                         </b:loop>
-
-                                        <div class="collapse" id="collapse-categories">
-                                            <b:loop values='data:labels' var='label' index='index'>
-                                                <b:if cond='data:index &gt;= 5'>
-                                                    <div expr:dir='data:blog.languageDirection'  class="list-group-item">
-                                                        <data:label.name/>
-                                                        <b:if cond='data:showFreqNumbers'>
-                                                            <span dir='ltr' class="badge"><data:label.count/></span>
-                                                        </b:if>
-                                                    </div>
-                                                </b:if>
-                                            </b:loop>
-                                        </div>
                                     </div>
-                                    <a class="panel-footer collapsed text-center" data-toggle="collapse" href="#collapse-categories">
-                                        <span class="panel-footer-label-show">すべてを表示</span>
-                                        <span class="panel-footer-label-hide">一部のみを表示</span>
-                                    </a>
                                 </div>
+                                <a class="panel-footer collapsed text-center" data-toggle="collapse" href="#collapse-categories">
+                                    <span class="collapse-label-show">すべてを表示</span>
+                                    <span class="collapse-label-hide">一部のみを表示</span>
+                                </a>
+                            </div>
 
-                                <b:include name='quickedit'/>
-                            </b:if>
+                            <b:include name='quickedit'/>
                         </div>
                     </b:includable>
                 </b:widget>
@@ -1094,11 +1098,13 @@
                                     <data:title/>
                                 </h2>
                             </b:if>
-                            <div id='ArchiveList'>
-                                <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
-                                <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
-                                <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
-                            </div>
+                            <b:if cond='data:style == &quot;HIERARCHY&quot;'>
+                                <div class="list-group">
+                                    <b:include data='data' name='interval'/>
+                                </div>
+                            </b:if>
+                            <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+                            <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
                             <b:include name='quickedit'/>
                         </div>
                     </b:includable>
@@ -1117,17 +1123,34 @@
                     </b:includable>
                     <b:includable id='interval' var='intervalData'>
                         <b:loop values='data:intervalData' var='interval'>
-                            <ul class='hierarchy'>
-                                <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
-                                    <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
-                                    <a class='post-count-link' expr:href='data:interval.url'>
-                                        <data:interval.name/>
-                                    </a>
-                                    <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+                            <b:if cond='data:interval.toggleId'>
+                                <a expr:href='&quot;#collapse-&quot; + data:interval.toggleId' data-toggle="collapse" expr:class='&quot;list-group-item&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot;&quot; : &quot; collapsed&quot;)'>
+                                    <span class="collapse-label-show glyphicon glyphicon-chevron-down"></span>
+                                    <span class="collapse-label-hide glyphicon glyphicon-chevron-up"></span>
+                                    <data:interval.name/>
+                                    <span class="badge">
+                                        <data:interval.post-count/>
+                                    </span>
+                                </a>
+                                <div expr:class="&quot;collapse&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot;&quot; : &quot; collapse&quot;)" expr:id='&quot;collapse-&quot; + data:interval.toggleId'>
                                     <b:include cond='data:interval.data' data='interval.data' name='interval'/>
-                                    <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
-                                </li>
-                            </ul>
+                                </div>
+
+                                <b:else/>
+
+                                <a expr:href='data:interval.url' class='list-group-item'>
+                                    <data:interval.name/>
+                                    <span class="badge">
+                                        <data:interval.post-count/>
+                                    </span>
+                                </a>
+                            </b:if>
+                            <!--
+                            <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+                                <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+                                <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+                            </li>
+                            -->
                         </b:loop>
                     </b:includable>
                     <b:includable id='menu' var='data'>
@@ -1149,23 +1172,10 @@
                         <ul class='posts'>
                             <b:loop values='data:posts' var='post'>
                                 <li><a expr:href='data:post.url'>
-                                    <data:post.title/>
+                                    posts <data:post.title/>
                                 </a></li>
                             </b:loop>
                         </ul>
-                    </b:includable>
-                    <b:includable id='toggle' var='interval'>
-                        <a class='toggle' href='javascript:void(0)'>
-                            <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
-                                <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-                                    &#9660;&#160;
-                                    <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
-                                    &#9668;&#160;
-                                    <b:else/>
-                                    &#9658;&#160;
-                                </b:if>
-                            </span>
-                        </a>
                     </b:includable>
                 </b:widget>
             </b:section>

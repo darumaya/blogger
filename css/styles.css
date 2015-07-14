@@ -179,15 +179,15 @@ aside a.panel-footer
 {
     display: block;
 }
-aside a.panel-footer > .panel-footer-label-show
+aside a.panel-footer > .collapse-label-show
 {
     display: none;
 }
-aside a.panel-footer.collapsed > .panel-footer-label-show
+aside a.panel-footer.collapsed > .collapse-label-show
 {
     display: inline;
 }
-aside a.panel-footer.collapsed > .panel-footer-label-hide
+aside a.panel-footer.collapsed > .collapse-label-hide
 {
     display: none;
 }
