@@ -175,21 +175,21 @@ aside
 {
     font-size: 16px;
 }
-aside > .collapse-label-show
-{
-    display: none;
-}
-aside.collapsed > .collapse-label-show
-{
-    display: inline;
-}
-aside.collapsed > .collapse-label-hide
-{
-    display: none;
-}
 aside a.panel-footer
 {
     display: block;
+}
+aside .collapse-label-show
+{
+    display: none;
+}
+aside .collapsed > .collapse-label-show
+{
+    display: inline;
+}
+aside .collapsed > .collapse-label-hide
+{
+    display: none;
 }
 aside .panel > .list-group:first-child .collapse > .list-group-item:first-child,
 aside .panel > .list-group:first-child .collapsing > .list-group-item:first-child
