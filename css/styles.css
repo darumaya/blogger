@@ -202,7 +202,7 @@ aside :not(.panel) > .list-group > .collapse-group > .list-group-item:first-chil
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-aside :not(.panel) > .list-group > :not(.collapse-group:last-child) > .list-group-item:last-child
+aside :not(.panel) > .list-group > .collapse-group:not(:last-child) > .list-group-item:last-child
 {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
