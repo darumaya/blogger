@@ -123,19 +123,13 @@ aside {
       }
     }
   }
-  .panel {
-    >.list-group {
+  .collapse,
+  .collapsing {
+    > .list-group-item {
       &:first-child {
-        .collapse,
-        .collapsing {
-          > .list-group-item {
-            &:first-child {
-              border-top: 1px solid @list-group-border !important;
-              border-top-left-radius: 0 !important;
-              border-top-right-radius: 0 !important;
-            }
-          }
-        }
+        border-top: 1px solid @list-group-border !important;
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
       }
     }
   }
