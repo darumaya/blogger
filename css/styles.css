@@ -204,10 +204,9 @@ aside :not(.panel) > .list-group > .collapse-group > .list-group-item:first-chil
 }
 aside :not(.panel) > .list-group > .collapse-group:not(:last-child) > .list-group-item:last-child
 {
+    border-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-
-    border-bototm: 0 !important;
 }
 .categories h2
 {
