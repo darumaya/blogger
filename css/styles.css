@@ -191,12 +191,23 @@ aside .collapsed > .collapse-label-hide
 {
     display: none;
 }
-aside .panel > .list-group:first-child .collapse > .list-group-item:first-child,
-aside .panel > .list-group:first-child .collapsing > .list-group-item:first-child
+aside .panel .collapse-group > .list-group-item:first-child
 {
     border-top: 1px solid #ddd !important;
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
+}
+aside :not(.panel) > .list-group > .collapse-group > .list-group-item:first-child
+{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+aside :not(.panel) > .list-group > :not(.collapse-group:last-child) > .list-group-item:last-child
+{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    border-bototm: 0;
 }
 .categories h2
 {

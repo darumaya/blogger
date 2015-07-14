@@ -1067,7 +1067,7 @@
                                         </b:if>
                                     </b:loop>
 
-                                    <div class="collapse" id="collapse-categories">
+                                    <div class="collapse collapse-group" id="collapse-categories">
                                         <b:loop values='data:labels' var='label' index='index'>
                                             <b:if cond='data:index &gt;= 5'>
                                                 <a expr:href='data:label.url' class="list-group-item">
@@ -1132,7 +1132,7 @@
                                         <data:interval.post-count/>
                                     </span>
                                 </a>
-                                <div expr:class="&quot;collapse&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot;&quot; : &quot; collapse&quot;)" expr:id='&quot;collapse-&quot; + data:interval.toggleId'>
+                                <div expr:class="&quot;collapse-group collapse&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; in&quot; : &quot;&quot;)" expr:id='&quot;collapse-&quot; + data:interval.toggleId'>
                                     <b:include cond='data:interval.data' data='interval.data' name='interval'/>
                                 </div>
 
@@ -1145,12 +1145,6 @@
                                     </span>
                                 </a>
                             </b:if>
-                            <!--
-                            <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
-                                <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
-                                <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
-                            </li>
-                            -->
                         </b:loop>
                     </b:includable>
                     <b:includable id='menu' var='data'>
