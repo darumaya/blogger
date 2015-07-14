@@ -231,7 +231,7 @@ aside :not(.panel) > .list-group > .collapse-group:not(:last-child) > .list-grou
 {
     margin: 0;
 
-    lign-height: 20px;
+    lign-height: 20px !important;
 }
 .recent-comment-author
 {
