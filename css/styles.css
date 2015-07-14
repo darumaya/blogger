@@ -183,11 +183,11 @@ aside .collapse-label-show
 {
     display: none;
 }
-aside .collapsed > .collapse-label-show
+aside .collapsed .collapse-label-show
 {
     display: inline;
 }
-aside .collapsed > .collapse-label-hide
+aside .collapsed .collapse-label-hide
 {
     display: none;
 }
