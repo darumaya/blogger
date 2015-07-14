@@ -108,6 +108,9 @@ span {
 
 aside {
   font-size: @font-size-less-large;
+  a.panel-footer {
+    display: block;
+  }
 }
 
 .categories {
@@ -119,6 +122,17 @@ aside {
     &:active {
       text-decoration: none;
       background-color: @list-group-hover-bg;
+    }
+  }
+  .panel-footer-label-show {
+    display: none;
+  }
+  .collapsed {
+    .panel-footer-label-show {
+      display: inline;
+    }
+    .panel-footer-label-hide {
+      display: none;
     }
   }
 }

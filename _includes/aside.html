@@ -115,44 +115,39 @@
                                 <h2>
                                     <data:title/>
                                 </h2>
-                                <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-                                    <b:if cond='data:display == &quot;list&quot;'>
-                                        <ul>
-                                            <b:loop values='data:labels' var='label'>
-                                                <li>
-                                                    <b:if cond='data:blog.url == data:label.url'>
-                                                        <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-                                                        <b:else/>
-                                                        <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'>
-                                                            <data:label.name/>
-                                                        </a>
-                                                    </b:if>
-                                                    <b:if cond='data:showFreqNumbers'>
-                                                        <span dir='ltr'>(<data:label.count/>)</span>
-                                                    </b:if>
-                                                </li>
-                                            </b:loop>
-                                        </ul>
-
-                                        <b:else/>
-
-                                        <b:loop values='data:labels' var='label'>
-                                        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-                                            <b:if cond='data:blog.url == data:label.url'>
-                                                <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-                                                <b:else/>
-                                                <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'>
+                                <div class="panel panel-default">
+                                    <div class="list-group">
+                                        <b:loop values='data:labels' var='label' index='index'>
+                                            <b:if cond='data:index &lt; 5'>
+                                                <div expr:dir='data:blog.languageDirection'  class="list-group-item">
                                                     <data:label.name/>
-                                                </a>
+                                                    <b:if cond='data:showFreqNumbers'>
+                                                        <span dir='ltr' class="badge"><data:label.count/></span>
+                                                    </b:if>
+                                                </div>
                                             </b:if>
-                                            <b:if cond='data:showFreqNumbers'>
-                                                <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-                                            </b:if>
-                                        </span>
                                         </b:loop>
-                                    </b:if>
-                                    <b:include name='quickedit'/>
+
+                                        <div class="collapse" id="collapse-categories">
+                                            <b:loop values='data:labels' var='label' index='index'>
+                                                <b:if cond='data:index &gt;= 5'>
+                                                    <div expr:dir='data:blog.languageDirection'  class="list-group-item">
+                                                        <data:label.name/>
+                                                        <b:if cond='data:showFreqNumbers'>
+                                                            <span dir='ltr' class="badge"><data:label.count/></span>
+                                                        </b:if>
+                                                    </div>
+                                                </b:if>
+                                            </b:loop>
+                                        </div>
+                                    </div>
+                                    <a class="panel-footer" data-toggle="collapse" href="#collapse-categories">
+                                        <span class="panel-footer-label-show">すべてを表示</span>
+                                        <span class="panel-footer-label-hide">一部のみを表示</span>
+                                    </a>
                                 </div>
+
+                                <b:include name='quickedit'/>
                             </b:if>
                         </div>
                     </b:includable>
