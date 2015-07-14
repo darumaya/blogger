@@ -115,7 +115,7 @@
                             <div class="panel panel-default">
                                 <div class="list-group">
                                     <b:loop values='data:labels' var='label' index='index'>
-                                        <b:if cond='data:index &lt; 5'>
+                                        <b:if cond='data:index &lt; 10'>
                                             <a expr:href='data:label.url' class="list-group-item">
                                                 <data:label.name/>
                                                 <b:if cond='data:showFreqNumbers'>
@@ -127,7 +127,7 @@
 
                                     <div class="collapse collapse-group" id="collapse-categories">
                                         <b:loop values='data:labels' var='label' index='index'>
-                                            <b:if cond='data:index &gt;= 5'>
+                                            <b:if cond='data:index &gt;= 10'>
                                                 <a expr:href='data:label.url' class="list-group-item">
                                                     <data:label.name/>
                                                     <b:if cond='data:showFreqNumbers'>

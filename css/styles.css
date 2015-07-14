@@ -230,6 +230,8 @@ aside :not(.panel) > .list-group > .collapse-group:not(:last-child) > .list-grou
 .recent-comment-date
 {
     margin: 0;
+
+    lign-height: 20px;
 }
 .recent-comment-author
 {
