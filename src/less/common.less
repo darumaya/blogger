@@ -111,14 +111,14 @@ aside {
   a.panel-footer {
     display: block;
 
-    .panel-footer-label-show {
+    > .panel-footer-label-show {
       display: none;
     }
-    .collapsed {
-      .panel-footer-label-show {
+    &.collapsed {
+      > .panel-footer-label-show {
         display: inline;
       }
-      .panel-footer-label-hide {
+      > .panel-footer-label-hide {
         display: none;
       }
     }
