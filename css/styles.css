@@ -259,11 +259,31 @@ aside :not(.panel) > .list-group > .collapse-group:not(:last-child) > .list-grou
 }
 @media only screen and (min-width: 992px)
 {
-    background-image: url(../images/l/lunch-md.jpg);
+    .lunch
+    {
+        background-image: url(../images/l/lunch-md.jpg);
+    }
+}
+@media only screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 992px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 992px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 992px) and (min-device-pixel-ratio: 2), only screen and (min-width: 992px) and (min-resolution: 192dpi), only screen and (min-width: 992px) and (min-resolution: 2dppx)
+{
+    .lunch
+    {
+        background-image: url(../images/l/lunch-md-2x.jpg);
+    }
 }
 @media only screen and (min-width: 1200px)
 {
-    background-image: url(../images/l/lunch-lg.jpg);
+    .lunch
+    {
+        background-image: url(../images/l/lunch-lg.jpg);
+    }
+}
+@media only screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1200px) and (min-resolution: 192dpi), only screen and (min-width: 1200px) and (min-resolution: 2dppx)
+{
+    .lunch
+    {
+        background-image: url(../images/l/lunch-lg-2x.jpg);
+    }
 }
 .noren-top
 {
