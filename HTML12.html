@@ -1,6 +1,5 @@
 <script>
     function blogFeed(json) {
-        console.log(json);
         for (var i in json.feed.entry) {
             var entryItem = json.feed.entry[i];
             var title = entryItem.title.$t;
@@ -30,7 +29,7 @@
                     .appendTo('#blogFeed');
         }
     }
-    (function(d, s, id) {
+    function loadFeed(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
@@ -38,7 +37,11 @@
         js.async = 'async';
         js.src = "//blog.darumaya-gofuku.jp/feeds/comments/summary?alt=json-in-script&callback=blogFeed&max-results=5";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'getBlogFeed'));
+    };
+    function callFeed () {
+        loadFeed(document, 'script', 'getBlogFeed');
+    };
+    window.addEventListener('load', callFeed, false);
 </script>
 <div id="blogFeed" class="list-group">
 </div>

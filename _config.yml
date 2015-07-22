@@ -13,4 +13,5 @@ exclude:
   - 'HTML2.html'
   - 'HTML3.html'
   - 'HTML4.html'
+  - 'HTML6.html'
   - 'HTML12.html'

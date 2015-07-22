@@ -92,6 +92,9 @@ span {
         filter: brightness(90%);
       }
     }
+    &:visited {
+      color: @gray;
+    }
   }
   h2 {
     margin-top: (@line-height-computed / 2);
@@ -195,3 +198,55 @@ aside {
 .recent-comment-text {
   border-radius: 8px;
 }
+
+
+@media only screen and (min-width: @screen-sm-min) {
+  width: @width-sm;
+  height: 220px;
+  background-image: url("@{img-sm}");
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url("@{img-sm-2x}");
+    background-size: @width-sm 220px;
+  }
+};
+
+@media only screen and (min-width: @screen-md-min) {
+  width: @width-md;
+  height: 220px;
+  background-image: url("@{img-md}");
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url("@{img-md-2x}");
+    background-size: @width-md 220px;
+  }
+};
+
+@media only screen and (min-width: @screen-lg-min) {
+  width: @width-lg;
+  height: 220px;
+  background-image: url("@{img-lg}");
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url("@{img-lg-2x}");
+    background-size: @width-lg 220px;
+  }
+};
