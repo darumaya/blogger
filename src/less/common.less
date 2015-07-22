@@ -200,10 +200,14 @@ aside {
 }
 
 
-@media only screen and (min-width: @screen-sm-min) {
-  width: @width-sm;
-  height: 220px;
-  background-image: url("@{img-sm}");
+//
+// lunch map image
+//
+
+.lunch {
+  background-image: url(../images/l/lunch-sm.jpg);
+  background-size: cover;
+  background-position: center center;
 
   @media
   (-webkit-min-device-pixel-ratio: 2),
@@ -212,15 +216,15 @@ aside {
   (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    background-image: url("@{img-sm-2x}");
-    background-size: @width-sm 220px;
+    background-image: url(../images/l/lunch-sm-2x.jpg);
+    // background-size: @width-sm 220px;
   }
-};
+
+}
+
 
 @media only screen and (min-width: @screen-md-min) {
-  width: @width-md;
-  height: 220px;
-  background-image: url("@{img-md}");
+  background-image: url(../images/l/lunch-md.jpg);
 
   @media
   (-webkit-min-device-pixel-ratio: 2),
@@ -229,15 +233,12 @@ aside {
   (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    background-image: url("@{img-md-2x}");
-    background-size: @width-md 220px;
+    background-image: url(../images/l/lunch-md-2x.jpg);
   }
 };
 
 @media only screen and (min-width: @screen-lg-min) {
-  width: @width-lg;
-  height: 220px;
-  background-image: url("@{img-lg}");
+  background-image: url(../images/l/lunch-lg.jpg);
 
   @media
   (-webkit-min-device-pixel-ratio: 2),
@@ -246,7 +247,6 @@ aside {
   (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    background-image: url("@{img-lg-2x}");
-    background-size: @width-lg 220px;
+    background-image: url(../images/l/lunch-lg-2x.jpg);
   }
 };
