@@ -1,45 +1,37 @@
 <aside>
     <div class='container categories'>
-        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                <h2>カテゴリ</h2>
-            </b:if>
+        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+            <h2>カテゴリ</h2>
         </b:if>
         <div class="row">
             <b:section id='aside1-1' preferred='yes' showaddelement='yes'>
                 <b:widget id='HTML5' locked='false' title='洗い張り' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <data:content/>
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <data:content/>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
                 <b:widget id='HTML8' locked='false' title='イベント' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <data:content/>
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <data:content/>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
                 <b:widget id='HTML9' locked='false' title='花・本・考えごと' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <data:content/>
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <data:content/>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
@@ -49,25 +41,21 @@
             <b:section id="aside1-2" preferred='yes' showaddelement='yes'>
                 <b:widget id='HTML10' locked='false' title='食・酒・料理' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <data:content/>
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <data:content/>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
                 <b:widget id='HTML11' locked='false' title='ばあちゃんの着こなし' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <data:content/>
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <data:content/>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
@@ -80,39 +68,35 @@
             <b:section id='aside2' preferred='yes' showaddelement='yes'>
                 <b:widget id='HTML6' locked='false' title='ランチマップ' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-6">
-                                    <!-- only display title if it's non-empty -->
-                                    <b:if cond='data:title != &quot;&quot;'>
-                                        <h2 class='title'>
-                                            <data:title/>
-                                        </h2>
-                                    </b:if>
-                                    <data:content/>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-6">
+                                <!-- only display title if it's non-empty -->
+                                <b:if cond='data:title'>
+                                    <h2 class='title'>
+                                        <data:title/>
+                                    </h2>
+                                </b:if>
+                                <data:content/>
 
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
                 <b:widget id='HTML7' locked='false' title='お客様ブログ' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-6">
-                                    <!-- only display title if it's non-empty -->
-                                    <b:if cond='data:title != &quot;&quot;'>
-                                        <h2 class='title'>
-                                            <data:title/>
-                                        </h2>
-                                    </b:if>
-                                    <data:content/>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-6">
+                                <!-- only display title if it's non-empty -->
+                                <b:if cond='data:title'>
+                                    <h2 class='title'>
+                                        <data:title/>
+                                    </h2>
+                                </b:if>
+                                <data:content/>
 
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
@@ -125,24 +109,22 @@
             <b:section id='aside3' preferred='yes' showaddelement='yes'>
                 <b:widget id='BlogArchive1' locked='false' title='月別' type='BlogArchive'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <b:if cond='data:title != &quot;&quot;'>
-                                        <h2>
-                                            <data:title/>
-                                        </h2>
-                                    </b:if>
-                                    <b:if cond='data:style == &quot;HIERARCHY&quot;'>
-                                        <div class="list-group">
-                                            <b:include data='data' name='interval'/>
-                                        </div>
-                                    </b:if>
-                                    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
-                                    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <b:if cond='data:title'>
+                                    <h2>
+                                        <data:title/>
+                                    </h2>
+                                </b:if>
+                                <b:if cond='data:style == "HIERARCHY"'>
+                                    <div class="list-group">
+                                        <b:include data='data' name='interval'/>
+                                    </div>
+                                </b:if>
+                                <b:include cond='data:style == "FLAT"' data='data' name='flat'/>
+                                <b:include cond='data:style == "MENU"' data='data' name='menu'/>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                     <b:includable id='flat' var='data'>
@@ -161,14 +143,14 @@
                     <b:includable id='interval' var='intervalData'>
                         <b:loop values='data:intervalData' var='interval'>
                             <b:if cond='data:interval.toggleId'>
-                                <a expr:href='&quot;#collapse-&quot; + data:interval.toggleId' data-toggle="collapse" expr:class='&quot;list-group-item&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot;&quot; : &quot; collapsed&quot;)'>
+                                <a expr:href='"#collapse-" + data:interval.toggleId' data-toggle="collapse" expr:class='"list-group-item" + (data:interval.expclass == "expanded" ? "" : " collapsed")'>
                                     <strong>
                                         <span class="collapse-label-show glyphicon glyphicon-chevron-right"></span>
                                         <span class="collapse-label-hide glyphicon glyphicon-chevron-down"></span>
                                         <data:interval.name/>
                                     </strong>
                                 </a>
-                                <div expr:class="&quot;collapse-group collapse&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; in&quot; : &quot;&quot;)" expr:id='&quot;collapse-&quot; + data:interval.toggleId'>
+                                <div expr:class='"collapse-group collapse" + (data:interval.expclass == "expanded" ? " in" : "")' expr:id='"collapse-" + data:interval.toggleId'>
                                     <b:include cond='data:interval.data' data='interval.data' name='interval'/>
                                 </div>
 
@@ -184,7 +166,7 @@
                         </b:loop>
                     </b:includable>
                     <b:includable id='menu' var='data'>
-                        <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+                        <select expr:id='data:widget.instanceId + "_ArchiveMenu"'>
                             <option value=''>
                                 <data:title/>
                             </option>
@@ -210,18 +192,29 @@
                 </b:widget>
                 <b:widget id='Label1' locked='false' title='タグ別' type='Label'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <b:if cond='data:title != &quot;&quot;'>
-                                        <h2>
-                                            <data:title/>
-                                        </h2>
-                                    </b:if>
-                                    <div class="panel panel-default">
-                                        <div class="list-group">
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <b:if cond='data:title'>
+                                    <h2>
+                                        <data:title/>
+                                    </h2>
+                                </b:if>
+                                <div class="panel panel-default">
+                                    <div class="list-group">
+                                        <b:loop values='data:labels' var='label' index='index'>
+                                            <b:if cond='data:index &lt; 14'>
+                                                <a expr:href='data:label.url' class="list-group-item">
+                                                    <data:label.name/>
+                                                    <b:if cond='data:showFreqNumbers'>
+                                                        <span class="badge"><data:label.count/></span>
+                                                    </b:if>
+                                                </a>
+                                            </b:if>
+                                        </b:loop>
+
+                                        <div class="collapse collapse-group" id="collapse-categories">
                                             <b:loop values='data:labels' var='label' index='index'>
-                                                <b:if cond='data:index &lt; 14'>
+                                                <b:if cond='data:index &gt;= 14'>
                                                     <a expr:href='data:label.url' class="list-group-item">
                                                         <data:label.name/>
                                                         <b:if cond='data:showFreqNumbers'>
@@ -230,46 +223,31 @@
                                                     </a>
                                                 </b:if>
                                             </b:loop>
-
-                                            <div class="collapse collapse-group" id="collapse-categories">
-                                                <b:loop values='data:labels' var='label' index='index'>
-                                                    <b:if cond='data:index &gt;= 14'>
-                                                        <a expr:href='data:label.url' class="list-group-item">
-                                                            <data:label.name/>
-                                                            <b:if cond='data:showFreqNumbers'>
-                                                                <span class="badge"><data:label.count/></span>
-                                                            </b:if>
-                                                        </a>
-                                                    </b:if>
-                                                </b:loop>
-                                            </div>
                                         </div>
-                                        <a class="panel-footer collapsed text-center" data-toggle="collapse" href="#collapse-categories">
-                                            <span class="collapse-label-show">すべてを表示</span>
-                                            <span class="collapse-label-hide">一部のみを表示</span>
-                                        </a>
                                     </div>
-
-                                    <b:include name='quickedit'/>
+                                    <a class="panel-footer collapsed text-center" data-toggle="collapse" href="#collapse-categories">
+                                        <span class="collapse-label-show">すべてを表示</span>
+                                        <span class="collapse-label-hide">一部のみを表示</span>
+                                    </a>
                                 </div>
-                            </b:if>
+
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
                 <b:widget id='HTML12' locked='false' title='最近のコメント' type='HTML'>
                     <b:includable id='main'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                                <div class="col-sm-4">
-                                    <b:if cond='data:title != &quot;&quot;'>
-                                        <h2>
-                                            <data:title/>
-                                        </h2>
-                                    </b:if>
-                                    <data:content/>
-                                    <b:include name='quickedit'/>
-                                </div>
-                            </b:if>
+                        <b:if cond='data:blog.pageType != "item" and data:blog.pageType != "static_page"'>
+                            <div class="col-sm-4">
+                                <b:if cond='data:title'>
+                                    <h2>
+                                        <data:title/>
+                                    </h2>
+                                </b:if>
+                                <data:content/>
+                                <b:include name='quickedit'/>
+                            </div>
                         </b:if>
                     </b:includable>
                 </b:widget>
