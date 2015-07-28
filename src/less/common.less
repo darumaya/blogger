@@ -12,11 +12,6 @@ body {
 // main
 //
 
-main,
-.main {
-  font-size: @font-size-less-large;
-}
-
 a {
   color: @link-color;
 
@@ -100,8 +95,13 @@ span {
     margin-top: (@line-height-computed / 2);
     font-family: @font-family-serif;
   }
-  .posts hr:last-child {
-    display: none;
+
+  .posts {
+    font-size: @font-size-less-large;
+
+    hr:last-child {
+      display: none;
+    }
   }
   .row-nextprev {
     margin-top: 20px;
