@@ -175,6 +175,10 @@ fieldset[disabled] .btn-aqua.active
 {
     display: none;
 }
+.Blog .row-nextprev
+{
+    margin-top: 20px;
+}
 aside
 {
     font-size: 16px;
