@@ -91,12 +91,6 @@ span {
       color: @gray;
     }
   }
-  h2 {
-    margin-bottom: @line-height-computed;
-    font-family: @font-family-serif;
-    padding-bottom: ((@line-height-computed / 2) - 1);
-    border-bottom: 1px solid @page-header-border-color;
-  }
 
   .posts {
     font-size: @font-size-less-large;
@@ -104,9 +98,22 @@ span {
     hr:last-child {
       display: none;
     }
+
+    h2 {
+      font-family: @font-family-serif;
+    }
   }
   .row-nextprev {
     margin-top: 20px;
+  }
+}
+
+.post,
+.static_page {
+  h2 {
+    margin-bottom: @line-height-computed;
+    padding-bottom: ((@line-height-computed / 2) - 1);
+    border-bottom: 1px solid @page-header-border-color;
   }
 }
 

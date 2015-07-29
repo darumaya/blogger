@@ -160,15 +160,6 @@ fieldset[disabled] .btn-aqua.active
 {
     color: #555;
 }
-.Blog h2
-{
-    font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
-
-    margin-bottom: 20px;
-    padding-bottom: 9px;
-
-    border-bottom: 1px solid #eee;
-}
 .Blog .posts
 {
     font-size: 16px;
@@ -177,9 +168,21 @@ fieldset[disabled] .btn-aqua.active
 {
     display: none;
 }
+.Blog .posts h2
+{
+    font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+}
 .Blog .row-nextprev
 {
     margin-top: 20px;
+}
+.post h2,
+.static_page h2
+{
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #eee;
 }
 aside
 {
