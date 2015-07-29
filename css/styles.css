@@ -180,6 +180,13 @@ fieldset[disabled] .btn-aqua.active
 {
     margin-top: 20px;
 }
+.Blog .breadcrumbs
+{
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .item h2,
 .static_page h2
 {
