@@ -172,6 +172,10 @@ fieldset[disabled] .btn-aqua.active
 {
     font-family: Georgia, 'Times New Roman', Times, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
 }
+.Blog .posts .post-body
+{
+    line-height: 1.75;
+}
 .Blog .row-nextprev
 {
     margin-top: 20px;

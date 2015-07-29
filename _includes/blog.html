@@ -304,7 +304,7 @@
                 <b:if cond='data:post.isDateStart'>
                 </b:if>
                 <b:if cond='data:post.dateHeader'>
-                    <h5 class="text-right"><data:post.dateHeader/></h5>
+                    <h5><data:post.dateHeader/></h5>
                 </b:if>
 
                 <div itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
@@ -340,11 +340,11 @@
                     <b:if cond='!data:blog.metaDescription'>
                         <!-- Then use the post body as the schema.org description,
                             for good G+/FB snippeting. -->
-                        <div expr:id='"post-body-" + data:post.id' itemprop='description articleBody'>
+                        <div class="post-body" expr:id='"post-body-" + data:post.id' itemprop='description articleBody'>
                             <data:post.body/>
                         </div>
                         <b:else/>
-                        <div expr:id='"post-body-" + data:post.id' itemprop='articleBody'>
+                        <div class="post-body" expr:id='"post-body-" + data:post.id' itemprop='articleBody'>
                             <data:post.body/>
                         </div>
                     </b:if>
