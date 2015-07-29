@@ -176,6 +176,16 @@ fieldset[disabled] .btn-aqua.active
 {
     line-height: 1.75;
 }
+.Blog .posts .post-body img
+{
+    border-radius: 6px;
+}
+.Blog .posts .post-body a:hover img,
+.Blog .posts .post-body a:active img
+{
+    -webkit-filter: brightness(90%);
+            filter: brightness(90%);
+}
 .Blog .row-nextprev
 {
     margin-top: 20px;

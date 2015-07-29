@@ -105,6 +105,17 @@ span {
 
     .post-body {
       line-height: 1.75;
+
+      img {
+        border-radius: @border-radius-large;
+      }
+
+      a:hover,
+      a:active {
+        img {
+          filter: brightness(90%);
+        }
+      }
     }
   }
 
