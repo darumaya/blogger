@@ -92,8 +92,10 @@ span {
     }
   }
   h2 {
-    margin-top: (@line-height-computed / 2);
+    margin-bottom: @line-height-computed;
     font-family: @font-family-serif;
+    padding-bottom: ((@line-height-computed / 2) - 1);
+    border-bottom: 1px solid @page-header-border-color;
   }
 
   .posts {
@@ -173,6 +175,9 @@ aside {
   h2 {
     font-family: @font-family-serif;
     margin-top: 60px;
+    margin-bottom: @line-height-computed;
+    padding-bottom: ((@line-height-computed / 2) - 1);
+    border-bottom: 1px solid @page-header-border-color;
   }
 }
 
