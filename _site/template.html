@@ -425,7 +425,7 @@
         </b:includable>
         <b:includable id='post' var='post'>
 
-            <b:if cond='data:blog.pageType == "item"'>
+            <b:if cond='data:blog.pageType == "item" or data:blog.pageType == "static_page"'>
 
                 <b:if cond='data:post.isDateStart'>
                     <b:if cond='data:post.isFirstPost == "false"'>
@@ -433,10 +433,10 @@
                 </b:if>
                 <b:if cond='data:post.isDateStart'>
                 </b:if>
-                <b:if cond='data:post.dateHeader'>
-                    <h5 class='date-header'><data:post.dateHeader/></h5>
-                </b:if>
                 <b:if cond='data:post.isDateStart'>
+                </b:if>
+                <b:if cond='data:post.dateHeader'>
+                    <h5 class="text-right"><data:post.dateHeader/></h5>
                 </b:if>
 
                 <div itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
@@ -463,6 +463,7 @@
                             </b:if>
                         </h2>
                     </b:if>
+
 
                     <div class='post-header'>
                         <div class='post-header-line-1'/>
