@@ -271,3 +271,39 @@ aside {
     }
   }
 }
+
+.map-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  &.map-icon-red {
+    background-position: 0 0;
+  }
+  &.map-icon-orange {
+    background-position: 28px 0;
+  }
+  &.map-icon-white {
+    background-position: (28px * 2) 0;
+  }
+  &.map-icon-home {
+    background-position: (28px * 3) 0;
+  }
+  &.map-icon-blue {
+    background-position: 0 28px;
+  }
+  &.map-icon-rose {
+    background-position: 28px 28px;
+  }
+  &.map-icon-purple {
+    background-position: (28px * 2) 28px;
+  }
+  &.map-icon-yellow {
+    background-position: 0 (28px * 2);
+  }
+  &.map-icon-aqua {
+    background-position: 28px (28px * 2);
+  }
+  &.map-icon-green {
+    background-position: (28px * 2) (28px * 2);
+  }
+}
