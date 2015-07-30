@@ -417,7 +417,7 @@
                                 <!-- email post links -->
                                 <b:if cond='data:post.emailPostUrl'>
                                   <span class='item-action'>
-                                  <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg' target="_blank">
+                                  <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
                                       <img alt='' class='icon-action' height='13' src='http://img1.blogblog.com/img/icon18_email.gif' width='18'/>
                                   </a>
                                   </span>
@@ -531,11 +531,11 @@
         </b:includable>
         <b:includable id='postQuickEdit' var='post'>
             <b:if cond='data:post.editUrl'>
-                            <span expr:class='"item-control " + data:post.adminClass'>
-                              <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-                                  <img alt='' class='icon-action' height='18' src='http://img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
-                              </a>
-                            </span>
+                <span expr:class='"item-control " + data:post.adminClass'>
+                    <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg' target="_blank">
+                        <img alt='' class='icon-action' height='18' src='http://img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+                    </a>
+                </span>
             </b:if>
         </b:includable>
         <b:includable id='shareButtons' var='post'>
