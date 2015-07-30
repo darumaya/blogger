@@ -328,39 +328,39 @@ aside h2
 }
 .map-icon.map-icon-orange
 {
-    background-position: 28px 0;
+    background-position: -28px 0;
 }
 .map-icon.map-icon-white
 {
-    background-position: 56px 0;
+    background-position: -56px 0;
 }
 .map-icon.map-icon-home
 {
-    background-position: 84px 0;
+    background-position: -84px 0;
 }
 .map-icon.map-icon-blue
 {
-    background-position: 0 28px;
+    background-position: 0 -28px;
 }
 .map-icon.map-icon-rose
 {
-    background-position: 28px 28px;
+    background-position: -28px -28px;
 }
 .map-icon.map-icon-purple
 {
-    background-position: 56px 28px;
+    background-position: -56px -28px;
 }
 .map-icon.map-icon-yellow
 {
-    background-position: 0 56px;
+    background-position: 0 -56px;
 }
 .map-icon.map-icon-aqua
 {
-    background-position: 28px 56px;
+    background-position: -28px -56px;
 }
 .map-icon.map-icon-green
 {
-    background-position: 56px 56px;
+    background-position: -56px -56px;
 }
 .noren-top
 {

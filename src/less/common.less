@@ -273,38 +273,39 @@ aside {
 }
 
 .map-icon {
+  @icon-size: 28px;
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: @icon-size;
+  height: @icon-size;
   background-image: url(../images/m/map-icons.png);
   &.map-icon-red {
     background-position: 0 0;
   }
   &.map-icon-orange {
-    background-position: 28px 0;
+    background-position: -@icon-size 0;
   }
   &.map-icon-white {
-    background-position: (28px * 2) 0;
+    background-position: (-@icon-size * 2) 0;
   }
   &.map-icon-home {
-    background-position: (28px * 3) 0;
+    background-position: (-@icon-size * 3) 0;
   }
   &.map-icon-blue {
-    background-position: 0 28px;
+    background-position: 0 -@icon-size;
   }
   &.map-icon-rose {
-    background-position: 28px 28px;
+    background-position: -@icon-size -@icon-size;
   }
   &.map-icon-purple {
-    background-position: (28px * 2) 28px;
+    background-position: (-@icon-size * 2) -@icon-size;
   }
   &.map-icon-yellow {
-    background-position: 0 (28px * 2);
+    background-position: 0 (-@icon-size * 2);
   }
   &.map-icon-aqua {
-    background-position: 28px (28px * 2);
+    background-position: -@icon-size (-@icon-size * 2);
   }
   &.map-icon-green {
-    background-position: (28px * 2) (28px * 2);
+    background-position: (-@icon-size * 2) (-@icon-size * 2);
   }
 }
