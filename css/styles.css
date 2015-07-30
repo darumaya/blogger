@@ -362,6 +362,10 @@ aside h2
 {
     background-position: -56px -56px;
 }
+.well-legend
+{
+    font-size: 16px;
+}
 .noren-top
 {
     background-color: #640125;
