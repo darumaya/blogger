@@ -366,6 +366,10 @@ aside h2
 {
     font-size: 14px;
 }
+.label
+{
+    background-color: #8c8541;
+}
 .noren-top
 {
     background-color: #640125;
