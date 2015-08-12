@@ -21,3 +21,7 @@ exclude:
   - 'HTML10.html'
   - 'HTML11.html'
   - 'HTML12.html'
+  - 'link.html'
+  - 'lunch.html'
+  - 'profile.html'
+
