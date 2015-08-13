@@ -54,8 +54,10 @@ $(document).on('breakpoint', function(event) {
     $('.fb-like-box > span, .fb-like-box > span > iframe').css('width', width);
 });
 
-$('.post-body a > img').parent().on('click', function(event) {
+$('.post-body a > img').parent().filter('[href*="picasaweb.google.co.jp"], [href*="picasaweb.google.com"]').on('click', function(event) {
     event.preventDefault();
-    $(this).ekkoLightbox();
+    $(this).ekkoLightbox({
+        type: 'image'
+    });
 });
 
