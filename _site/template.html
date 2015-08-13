@@ -148,7 +148,7 @@
                             var img = '<div class="embed-responsive ' + classes + '">'
                                     + "<div style='background-image:url({src})' title='{alt}' class='embed-responsive-item'></div>"
                                     + '</div>';
-                            src = src.replace('/s72-c/', '/s360/');
+                            src = src.replace(/\/s72-c(.*?)\//, '/s360$1/');
                             img = img.replace('{src}', src).replace('{alt}', alt);
                             return img;
                         };
