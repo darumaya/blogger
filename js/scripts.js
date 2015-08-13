@@ -59,7 +59,7 @@ $('.post-body a[href*="picasaweb.google.co.jp"] > img, .post-body a[href*="picas
     .on('click', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox({
-        source: $(this).find('img').attr('src').replace(/\/s\d+(-.*)?\//, '/s1600$1/'),
+        remote: $(this).find('img').attr('src').replace(/\/s\d+(-.*)?\//, '/s1600$1/'),
         type: 'image'
     });
 });
