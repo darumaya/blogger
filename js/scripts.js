@@ -54,7 +54,7 @@ $(document).on('breakpoint', function(event) {
     $('.fb-like-box > span, .fb-like-box > span > iframe').css('width', width);
 });
 
-$('.post-body a').parent().on('click', function(event) {
+$('.post-body a > img').parent().on('click', function(event) {
     event.preventDefault();
     $(this).ekkoLightbox();
 });
