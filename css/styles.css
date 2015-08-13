@@ -69,6 +69,13 @@ span.img-md
 {
     display: block;
 }
+a.thumbnail:hover,
+a.thumbnail:active
+{
+    text-decoration: none;
+
+    background-color: #f5f5f5;
+}
 .btn-aqua
 {
     color: #fff;
@@ -241,13 +248,6 @@ aside :not(.panel) > .list-group > .collapse-group:not(:last-child) > .list-grou
     border-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-}
-aside a.thumbnail:hover,
-aside a.thumbnail:active
-{
-    text-decoration: none;
-
-    background-color: #f5f5f5;
 }
 aside h2
 {

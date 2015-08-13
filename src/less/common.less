@@ -40,6 +40,14 @@ span {
   }
 }
 
+a.thumbnail {
+  &:hover,
+  &:active {
+    text-decoration: none;
+    background-color: @list-group-hover-bg;
+  }
+}
+
 //
 // button
 //
@@ -192,13 +200,6 @@ aside {
           }
         }
       }
-    }
-  }
-  a.thumbnail {
-    &:hover,
-    &:active {
-      text-decoration: none;
-      background-color: @list-group-hover-bg;
     }
   }
   h2 {
