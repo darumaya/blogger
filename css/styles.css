@@ -452,7 +452,7 @@ aside h2
 {
     .noren-top .logo > .logo-type
     {
-        width: 335px;
+        width: 308px;
         height: 25px;
         margin-left: 75px;
 
@@ -464,8 +464,8 @@ aside h2
     .noren-top .logo > .logo-type
     {
         background-image: url('/images/l/logo-type@2x.png');
-        -webkit-background-size: 335px 25px;
-                background-size: 335px 25px;
+        -webkit-background-size: 308px 25px;
+                background-size: 308px 25px;
     }
 }
 .noren-top .tag-line
