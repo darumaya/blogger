@@ -54,15 +54,8 @@ $(document).on('breakpoint', function(event) {
     $('.fb-like-box > span, .fb-like-box > span > iframe').css('width', width);
 });
 
-$(document).on('click', '*[data-toggle="lightbox"]', function(event) {
+$('.post-body a').parent().on('click', function(event) {
     event.preventDefault();
-    $(event.currentTarget).ekkoLightbox();
-});
-
-$(document).on('click', '.img-lightbox', function(event) {
-    var $target = $(event.currentTarget);
-    $target.ekkoLightbox({
-        remote: $target.attr('src').replace(/\-(xs|sm)/, '-md')
-    });
+    $(this).ekkoLightbox();
 });
 
