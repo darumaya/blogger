@@ -25,6 +25,8 @@
 </head>
 <body expr:class='data:blog.pageType'>
 
+{% include ie-alert.html %}
+
 <b:if cond='data:blog.pageType == &quot;index&quot;'>
     <div itemscope='itemscope' itemtype='http://schema.org/Blog' style='display: none;'>
         <meta expr:content='data:blog.title' itemprop='name'/>
